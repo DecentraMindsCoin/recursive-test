@@ -54,7 +54,7 @@ export const Todos = () => {
   }
 
   return (
-    <section className="w-10/12 lg:w-1/2 max-w-2xl flex flex-col items-center">
+    <section className="w-10/12 lg:w-1/2 max-w-2xl flex flex-col items-center mx-auto ">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -75,7 +75,7 @@ export const Todos = () => {
         </p>
       )}
       {hasTodos && (
-        <p>
+        <p className="text-white pt-10">
           [{remainingTodos} of {todosLength}] todos remaining
         </p>
       )}

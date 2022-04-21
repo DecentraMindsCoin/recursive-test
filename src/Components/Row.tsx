@@ -1,4 +1,6 @@
-import { TodoProps } from "../types"
+import { TodoProps } from '../types'
+import { useState } from 'react'
+import SubButton from '../Components/SubButton'
 
 export const Row = ({
   todo: { id, task, isCompleted },
@@ -7,26 +9,32 @@ export const Row = ({
 }: TodoProps) => (
   <div
     className={`
-        flex w-full p-4 mb-2 justify-between items-center
-       ${isCompleted ? "bg-gray-400 " : "bg-purple-500 rounded-xl"}
+         mb-2 flex w-full items-center justify-between p-4
+       ${
+         isCompleted
+           ? 'bg-gray-400 '
+           : 'bg-opacity- rounded-xl border-2 border-cyan-400 bg-white '
+       }
       `}
   >
     <p
       className={`
-          ml-2 text-xl font-sans font-medium
-          ${isCompleted ? "text-white line-through" : "text-gray-700"}
+          ml-2 font-sans text-xl font-medium
+          ${isCompleted ? 'text-white line-through' : 'white'}
         `}
     >
       {task}
-    </p>
-    <div className="w-1/6 flex justify-between items-center mr-2">
+    </p>{' '}
+    <SubButton />
+    <div className="mr-2 flex w-1/6 items-center justify-between space-x-2">
       <button
         aria-label="Delete a todo"
-        className="h-7 w-7 flex justify-center items-center bg-red-400 hover:bg-red-500 text-white font-bold  rounded"
+        className="flex h-7 w-7 items-center justify-center rounded bg-red-400 px-3 font-bold text-white  hover:bg-red-500"
         onClick={() => handleDeleteTodo(id)}
       >
-        X
+        x
       </button>
+
       <input
         type="checkbox"
         checked={isCompleted}
