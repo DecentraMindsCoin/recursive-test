@@ -8,7 +8,7 @@ export const Row = ({
   <div
     className={`
         flex w-full p-4 mb-2 justify-between items-center
-       ${isCompleted ? "bg-gray-400 " : "bg-green-300"}
+       ${isCompleted ? "bg-gray-400 " : "bg-purple-500 rounded-xl"}
       `}
   >
     <p

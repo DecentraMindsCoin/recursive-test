@@ -70,8 +70,8 @@ export const Todos = () => {
         />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-xl text-red-500 uppercase">
-          Please add a todo!
+        <p className="mb-5 text-xl text-red-500 uppercase font-bold text-mono">
+          Set Your Todo!
         </p>
       )}
       {hasTodos && (
