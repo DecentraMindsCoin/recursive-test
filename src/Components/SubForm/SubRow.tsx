@@ -1,8 +1,8 @@
-import { TodoProps } from '../types'
+import { TodoProps } from '../../types'
 import { useState } from 'react'
-import SubButton from './SubForm/SubButton'
 
-export const Row = ({
+
+export const SubRow = ({
   todo: { id, task, isCompleted },
   handleCheckTodo,
   handleDeleteTodo,
@@ -25,7 +25,7 @@ export const Row = ({
     >
       {task}
     </p>{' '}
-    <SubButton />
+    {/* <SubButton /> */}
     <div className="mr-2 flex w-1/6 items-center justify-between space-x-2">
       <button
         aria-label="Delete a todo"
