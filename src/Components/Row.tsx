@@ -9,11 +9,11 @@ export const Row = ({
 }: TodoProps) => (
   <div
     className={`
-         mb-2 flex w-full items-center justify-between p-4
+         mb-2 flex w-full items-center justify-between p-4 my-10
        ${
          isCompleted
            ? 'bg-gray-400 '
-           : 'bg-opacity- rounded-xl border-2 border-cyan-400 bg-white '
+           : 'bg-opacity- rounded-xl ring-8 ring-black shadow-black shadow-xl bg-white '
        }
       `}
   >

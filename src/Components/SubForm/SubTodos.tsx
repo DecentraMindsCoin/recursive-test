@@ -54,7 +54,7 @@ const SubTodos = () => {
   }
 
   return (
-    <section className="w-10/12 lg:w-1/2 max-w-2xl flex flex-col items-center mx-auto ">
+    <section className="scale-75 flex  items-center mx-auto flex-col">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -70,12 +70,12 @@ const SubTodos = () => {
         />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-xl text-red-500 uppercase font-bold text-mono">
+        <p className="mb-5 text-md text-red-500 uppercase font-bold text-mono">
           Set Your Todo!
         </p>
       )}
       {hasTodos && (
-        <p className="text-white pt-10">
+        <p className="text-white pt-10 text-xs">
           [{remainingTodos} of {todosLength}] todos remaining
         </p>
       )}

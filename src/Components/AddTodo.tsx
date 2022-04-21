@@ -7,8 +7,8 @@ export const AddTodo = ({
 }: AddTodoProps) => (
   <div className=' w-full'>
     {' '}
-    <h1 className="text-center py-10 text-3xl font-bold font-mono uppercase text-white">The Awesome Todo App...</h1>
-    <form className="flex w-full justify-between" onSubmit={handleSubmitTodo}>
+  
+    <form className="flex w-full justify-between scale-75" onSubmit={handleSubmitTodo}>
       <input
         type="text"
         name="task"
