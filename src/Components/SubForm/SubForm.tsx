@@ -5,7 +5,7 @@ import SubTodos from '../SubForm/SubTodos'
 const SubForm = () => {
 
   return (
-    <div className='w-full text-center space-y-5 py-10 bg-black font-mono'>
+    <div className='w-full text-center space-y-5 py-10 font-mono'>
     <SubTodos />    </div>
   )
 }

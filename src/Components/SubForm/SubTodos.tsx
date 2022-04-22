@@ -70,13 +70,13 @@ const SubTodos = () => {
         />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-md text-red-500 uppercase font-bold text-mono">
+        <p className="mb-5 text-xl text-black uppercase font-bold text-mono">
           Set Your Todo!
         </p>
       )}
       {hasTodos && (
         <p className="text-white pt-10 text-xs">
-          [{remainingTodos} of {todosLength}] todos remaining
+          [{remainingTodos} of {todosLength}] subtodos remaining
         </p>
       )}
     </section>

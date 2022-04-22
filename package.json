@@ -8,7 +8,11 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/forms": "^0.5.0",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.2.0",
     "next": "latest",
+    "next-pwa": "^5.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "uuid": "^8.3.2"

@@ -13,7 +13,7 @@ export const SubRow = ({
        ${
          isCompleted
            ? 'bg-gray-400 '
-           : 'bg-opacity- rounded-xl border-2 border-cyan-400 bg-white '
+           : 'bg-opacity-40 border-2 border-cyan-400 bg-white '
        }
       `}
   >

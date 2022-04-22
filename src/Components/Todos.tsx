@@ -6,7 +6,9 @@ import { data } from "../todos"
 import { AddTodo } from "./AddTodo"
 import { Todo } from "../types"
 
-export const Todos = () => {
+export const Todos = (todoItems: any) => {
+  const items = todoItems
+  console.log(items)
   const [todos, setTodos] = useState<Todo[]>(data)
   const [task, setTask] = useState("")
   const todosLength = todos.length
@@ -54,7 +56,7 @@ export const Todos = () => {
   }
 
   return (
-    <section className="w-full h-full flex flex-col items-center mx-auto max-w-5xl overflow-x-scroll">
+    <section className="w-full h-full flex flex-col items-center mx-auto max-w-5xl overflow-x-auto">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -70,7 +72,7 @@ export const Todos = () => {
         />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-xl text-red-500 uppercase font-bold text-mono">
+        <p className="mb-5 text-2xl text-red-500 uppercase font-bold text-mono">
           Set Your Todo!
         </p>
       )}

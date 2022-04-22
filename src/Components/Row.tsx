@@ -13,7 +13,7 @@ export const Row = ({
        ${
          isCompleted
            ? 'bg-gray-400 '
-           : 'bg-opacity- rounded-xl ring-8 ring-black shadow-black shadow-xl bg-white '
+           : 'bg-opacity-80 border-4 border-white shadow-black shadow-xl bg-purple-500 '
        }
       `}
   >
@@ -26,7 +26,7 @@ export const Row = ({
       {task}
     </p>{' '}
     <SubButton />
-    <div className="mr-2 flex w-1/6 items-center justify-between space-x-2">
+    <div className=" flex-row flex items-center justify-between space-x-2">
       <button
         aria-label="Delete a todo"
         className="flex h-7 w-7 items-center justify-center rounded bg-red-400 px-3 font-bold text-white  hover:bg-red-500"

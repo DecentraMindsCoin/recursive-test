@@ -13,7 +13,7 @@ const SubButton = () => {
       >
         {show ? '-' : '+'}
       </button>
-      <div className="mx-auto w-full  rounded-xl   border-2 bg-cyan-500 p-3">
+      <div className="mx-auto w-full  border-2 bg-transparent bg-opacity-90 p-3">
         {show && (
           <div>
            <SubTodos/>
