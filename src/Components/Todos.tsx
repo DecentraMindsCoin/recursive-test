@@ -1,16 +1,14 @@
-import React, { ChangeEvent, FormEvent, useState } from "react"
-const { v4: uuidv4 } = require('uuid');
+import React, { ChangeEvent, FormEvent, useState } from 'react'
+const { v4: uuidv4 } = require('uuid')
 
-import { Row } from "../Components/Row"
-import { data } from "../todos"
-import { AddTodo } from "./AddTodo"
-import { Todo } from "../types"
+import { Row } from '../Components/Row'
+import { data } from '../todos'
+import { AddTodo } from './AddTodo'
+import { Todo } from '../types'
 
-export const Todos = (todoItems: any) => {
-  const items = todoItems
-  console.log(items)
+export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data)
-  const [task, setTask] = useState("")
+  const [task, setTask] = useState('')
   const todosLength = todos.length
   const hasTodos = todos.length > 0
   const remainingTodos = todos.filter((todo) => !todo.isCompleted).length
@@ -36,7 +34,7 @@ export const Todos = (todoItems: any) => {
   const handleAddTodo = (todo: Todo) => {
     const updatedTodos = [...todos, todo]
     setTodos(updatedTodos)
-    setTask("")
+    setTask('')
   }
 
   const handleChange = (e: ChangeEvent) => {
@@ -56,7 +54,7 @@ export const Todos = (todoItems: any) => {
   }
 
   return (
-    <section className="w-full h-full flex flex-col items-center mx-auto max-w-5xl overflow-x-auto">
+    <section className="mx-auto flex h-full w-full max-w-5xl flex-col items-center overflow-x-auto">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -68,16 +66,15 @@ export const Todos = (todoItems: any) => {
           key={todo.id}
           todo={todo}
           handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
+          handleCheckTodo={handleCheckTodo} todoItems={[]}        />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-2xl text-red-500 uppercase font-bold text-mono">
+        <p className="text-mono mb-5 text-2xl font-bold uppercase text-red-500">
           Set Your Todo!
         </p>
       )}
       {hasTodos && (
-        <p className="text-white pt-10">
+        <p className="pt-10 text-white">
           [{remainingTodos} of {todosLength}] todos remaining
         </p>
       )}

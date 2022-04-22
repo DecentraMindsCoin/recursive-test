@@ -63,11 +63,10 @@ const SubTodos = () => {
       <div className="h-10" />
       {todos.map((todo) => (
         <Row
-          key={todo.id}
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
+              key={todo.id}
+              todo={todo}
+              handleDeleteTodo={handleDeleteTodo}
+              handleCheckTodo={handleCheckTodo} todoItems={[]}        />
       ))}
       {!hasTodos && (
         <p className="mb-5 text-xl text-black uppercase font-bold text-mono">
