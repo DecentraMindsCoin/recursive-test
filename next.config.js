@@ -21,8 +21,8 @@ module.exports = withPWA({
       "media.graphassets.com",
     ],
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
 })

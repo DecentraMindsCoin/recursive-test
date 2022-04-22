@@ -11,11 +11,11 @@ const AddSubTodo = ({ handleSubmitTodo, task, handleChange }: AddTodoProps) => (
         type="text"
         name="task"
         value={task}
-        className="mr-2 flex-1 rounded p-2 text-gray-700 shadow-lg shadow-cyan-500"
+        className="mr-2 flex-1 rounded p-2 text-gray-700 shadow-lg shadow-teal-400"
         onChange={handleChange}
       />
       <button type="submit" aria-label="Add todo">
-        <h1 className="rounded-full border-2 bg-cyan-500 px-3 py-1 shadow-lg shadow-black">
+        <h1 className="rounded-full border-2 bg-teal-400 px-3 py-1 shadow-lg shadow-black">
           +
         </h1>
       </button>

@@ -54,7 +54,7 @@ export const Todos = () => {
   }
 
   return (
-    <section className="mx-auto flex h-full w-full max-w-5xl flex-col items-center overflow-x-auto">
+    <section className="mx-auto flex h-full w-full max-w-5xl flex-col items-center overflow-auto">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
