@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Todos } from '../src/Components/Todos'
 import { GraphQLClient } from 'graphql-request'
 import ImageSlider from '../src/Components/ImageSlider'
+
 export type ItemsType = {
   id: string
   name: string
@@ -18,18 +19,16 @@ export type PropType = {
   bgImage: string
 }
 const Home = ({ todoItems }: PropType) => {
-  const gifs = todoItems
-  const bgImage = todoItems[0].image[1]
-  console.log(gifs)
+
   return (
-    <div className="">
+    <div className="bg-black h-full relative overflow-auto">
       <Head>
         <title>Recursive Challenge Todo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="relative flex h-screen flex-col items-center justify-center bg-black py-2">
-    <ImageSlider bgImage={bgImage} />
+    <ImageSlider todoItems={todoItems} id={''} name={''} url={''} urlPoint={''} image={''} items={''} gifs={[]} point={''} children={undefined}/>
 
         <div className="absolute h-full w-full  border-4 border-teal-300 bg-black bg-opacity-50 py-10 ">
           <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase  text-teal-300">
@@ -49,8 +48,10 @@ const Home = ({ todoItems }: PropType) => {
               </div>
             </div>
           </div>
-
-          <Todos />
+<div className='flex items-center relative w-full mx-auto'>
+   <Todos />
+</div>
+         
           {/* <Todos /> */}
         </div>
       </div>

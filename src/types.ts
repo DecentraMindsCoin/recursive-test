@@ -25,7 +25,7 @@ export type PropType = {
   name: string
   url: string
   urlPoint: string
-  image: object
+  image:  string
   items: string
   todoItems: {}
   gifs: []

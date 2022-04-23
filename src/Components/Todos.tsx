@@ -54,7 +54,8 @@ export const Todos = () => {
   }
 
   return (
-    <section className="mx-auto flex h-full w-full max-w-5xl flex-col items-center overflow-auto">
+    <div className='absolute w-full h-full'>
+          <section className="mx-auto flex max-w-5xl flex-col items-center  absolute">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -74,10 +75,12 @@ export const Todos = () => {
         </p>
       )}
       {hasTodos && (
-        <p className="pt-10 text-white">
+        <p className="py-10 text-white">
           [{remainingTodos} of {todosLength}] todos remaining
         </p>
       )}
     </section>
+    </div>
+
   )
 }
