@@ -7,6 +7,7 @@ import { AddTodo } from './AddTodo'
 import { Todo } from '../types'
 import Image from 'next/image'
 import {allImages} from '../todos'
+import Footer from './Footer'
 export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data)
   const [task, setTask] = useState('')
@@ -91,6 +92,7 @@ export const Todos = () => {
         </p>
       )}
     </section>
+    <Footer />
     </div>
 
   )

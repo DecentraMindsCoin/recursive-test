@@ -19,7 +19,7 @@ export const Row = ({
   >
     <div
       className={`
-          ml-2 font-sans text-sm font-medium  px-2 border-2 rounded-2xl bg-awesome-image-2 text-black text-center  italic mr-5 py-2  
+          ml-2 font-sans text-sm font-medium  px-2 border-2 border-black rounded-2xl bg-awesome-image-2 text-black text-center  italic mr-5 py-2  
           ${isCompleted ? ' line-through' : 'white'}
         `}
     >

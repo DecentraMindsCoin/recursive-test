@@ -4,6 +4,7 @@ import { Todos } from '../src/Components/Todos'
 import { GraphQLClient } from 'graphql-request'
 import ImageSlider from '../src/Components/ImageSlider'
 import SPA from '../src/Components/SPA'
+import Footer from '../src/Components/Footer'
 
 export type ItemsType = {
   id: string
@@ -20,19 +21,18 @@ export type PropType = {
   bgImage: string
 }
 const Home = ({ todoItems }: PropType) => {
-
   return (
-    <div className="bg-black h-full relative overflow-auto">
+    <div className="relative h-full overflow-auto bg-black">
       <Head>
         <title>Recursive Challenge Todo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="relative flex h-screen flex-col items-center justify-center bg-black py-2">
-    <ImageSlider />
+        <ImageSlider />
 
-        <div className="absolute h-full w-full border-t-violet-400 shadow-xl shadow-violet-400 border-b-violet-400 border-8 border-teal-300 bg-black bg-opacity-50 py-10 ">
-          <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase  text-teal-300">
+        <div className="absolute h-full w-full border-8 border-teal-300 border-t-violet-400 border-b-violet-400 bg-black bg-opacity-50 py-10 shadow-xl shadow-violet-400 ">
+          <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase text-teal-300  md:text-6xl">
             Lets Go Deep!
           </h1>
           <div className="flex-row">
@@ -42,16 +42,17 @@ const Home = ({ todoItems }: PropType) => {
               moving closer to your true self...
               <div className="py-20 text-center">
                 <span className="text-violet-400 ">
-                  Enter Things You {' '}
-                  <span className="italic leading-loose underlin text-black bg-black   py-1 px-2 rounded-full border-2 border-white bg-awesome-image-2">Must Do</span> Before You
-                  Die!
+                  Enter Things You{' '}
+                  <span className="rounded-full border-2 border-white bg-black  bg-awesome-image-2 py-1 px-2 font-extrabold italic leading-loose text-black">
+                    Must Do
+                  </span>{' '}
+                  Before You Die!
                 </span>
               </div>
             </div>
           </div>
-   <SPA />
+          <SPA />
 
-         
           {/* <Todos /> */}
         </div>
       </div>
@@ -63,7 +64,9 @@ export default Home
 
 export async function getServerSideProps() {
   // const urlPoint = process.env.ENDPOINT
-  const graphcms = new GraphQLClient("https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master")
+  const graphcms = new GraphQLClient(
+    'https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master'
+  )
 
   const { todoItems } = await graphcms.request(
     `{
