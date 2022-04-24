@@ -30,7 +30,7 @@ const Home = ({ todoItems }: PropType) => {
       <div className="relative flex h-screen flex-col items-center justify-center bg-black py-2">
     <ImageSlider todoItems={todoItems} id={''} name={''} url={''} urlPoint={''} image={''} items={''} gifs={[]} point={''} children={undefined}/>
 
-        <div className="absolute h-full w-full  border-4 border-teal-300 bg-black bg-opacity-50 py-10 ">
+        <div className="absolute h-full w-full border-t-violet-400 shadow-xl shadow-violet-400 border-b-violet-400 border-8 border-teal-300 bg-black bg-opacity-50 py-10 ">
           <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase  text-teal-300">
             Lets Go Deep!
           </h1>
@@ -40,17 +40,15 @@ const Home = ({ todoItems }: PropType) => {
               ponder! See how deep you can go and what you were ment to find by
               moving closer to your true self...
               <div className="py-20 text-center">
-                <span className="text-teal-300 ">
-                  Enter Things You Want{' '}
-                  <span className="italic underline">To Do</span> Before You
+                <span className="text-violet-400 ">
+                  Enter Things You {' '}
+                  <span className="italic underlin underline text-teal-400">Must Do</span> Before You
                   Die!
                 </span>
               </div>
             </div>
           </div>
-<div className='flex items-center relative w-full mx-auto'>
    <Todos />
-</div>
          
           {/* <Todos /> */}
         </div>

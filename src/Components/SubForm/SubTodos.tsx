@@ -54,7 +54,7 @@ const SubTodos = () => {
   }
 
   return (
-    <section className="scale-75 flex  items-center mx-auto flex-col">
+    <section className="scale-90 flex items-center mx-auto flex-col">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}

@@ -5,6 +5,7 @@ import { Row } from '../Components/Row'
 import { data } from '../todos'
 import { AddTodo } from './AddTodo'
 import { Todo } from '../types'
+import Image from 'next/image'
 
 export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data)
@@ -54,8 +55,8 @@ export const Todos = () => {
   }
 
   return (
-    <div className='absolute w-full h-full'>
-          <section className="mx-auto flex max-w-5xl flex-col items-center  absolute">
+    <div className='absolute w-full flex-1  h-full px-6'>
+          <section className="mx-auto  items-center max-w-5xl ">
       <AddTodo
         handleChange={handleChange}
         handleSubmitTodo={handleSubmitTodo}
@@ -70,9 +71,16 @@ export const Todos = () => {
           handleCheckTodo={handleCheckTodo} todoItems={[]}        />
       ))}
       {!hasTodos && (
-        <p className="text-mono mb-5 text-2xl font-bold uppercase text-red-500">
+        <div>
+           <p className="text-mono mb-5 text-2xl font-serif text-center font-bold uppercase text-violet-400">
           Set Your Todo!
         </p>
+        <div className='w-96 h-96 relative mx-auto border-2 border-white shadow-xl shadow-teal-400'>
+           <Image src='https://media.graphassets.com/E7FW2hfOTRSQsXLcbUoH' layout='fill' alt='' className='absolute' />
+        </div>
+       
+        </div>
+       
       )}
       {hasTodos && (
         <p className="py-10 text-white">

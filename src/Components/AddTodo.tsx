@@ -8,12 +8,12 @@ export const AddTodo = ({
   <div className=' w-full'>
     {' '}
   
-    <form className="flex w-full justify-between scale-75" onSubmit={handleSubmitTodo}>
+    <form className="flex w-full justify-between scale-90" onSubmit={handleSubmitTodo}>
       <input
         type="text"
         name="task"
         value={task}
-        className="text-gray-700 mr-2 flex-1 rounded p-2 shadow-lg shadow-teal-400"
+        className="text-gray-800 mx-2 flex-1 rounded-full  shadow-lg shadow-teal-400 "
         onChange={handleChange}
       />
       <button type="submit" aria-label="Add todo">
