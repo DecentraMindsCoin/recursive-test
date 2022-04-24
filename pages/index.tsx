@@ -5,6 +5,8 @@ import { GraphQLClient } from 'graphql-request'
 import ImageSlider from '../src/Components/ImageSlider'
 import SPA from '../src/Components/SPA'
 import Footer from '../src/Components/Footer'
+import { InferGetStaticPropsType } from 'next'
+
 
 export type ItemsType = {
   id: string
@@ -20,7 +22,9 @@ export type PropType = {
   url: string
   bgImage: string
 }
-const Home = ({ todoItems }: PropType) => {
+const Home = ({
+  todoItems,
+}: InferGetStaticPropsType<typeof getStaticSideProps>) => {
   return (
     <div className="relative h-full overflow-auto bg-black">
       <Head>
@@ -41,9 +45,9 @@ const Home = ({ todoItems }: PropType) => {
               ponder! See how deep you can go and what you were ment to find by
               moving closer to your true self...
               <div className="py-20 text-center">
-                <span className="text-violet-400 font-extrabold text-2xl">
+                <span className="text-2xl font-extrabold text-violet-400">
                   Enter Things You{' '}
-                  <span className="rounded-full border-2 border-white cursor-pointer hover:bg-awesome-image-3 bg-awesome-image-2 hover:text-white py-1 px-3 font-extrabold italic leading-loose text-black">
+                  <span className="cursor-pointer rounded-full border-2 border-white bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 hover:text-white">
                     Must Do
                   </span>{' '}
                   Before You Die!
@@ -62,11 +66,11 @@ const Home = ({ todoItems }: PropType) => {
 
 export default Home
 
-export async function getServerSideProps() {
-  // const urlPoint = process.env.ENDPOINT
-  const graphcms = new GraphQLClient(
-    'https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master'
-  )
+export async function getStaticSideProps() {
+  // const UrlPoint = process.env.ENDPOINT
+
+  const UrlPoint = process.env.ENDPOINT
+  const graphcms = new GraphQLClient("https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master")
 
   const { todoItems } = await graphcms.request(
     `{

@@ -15,7 +15,7 @@ const SubButton = () => {
       </button>
       <div className="mx-auto w-full  bg-transparent bg-opacity-90 p-3">
         {show && (
-          <div>
+          <div className=''>
            <SubTodos/>
           </div>
         )}

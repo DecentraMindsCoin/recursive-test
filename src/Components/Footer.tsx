@@ -33,6 +33,7 @@ const Footer = () => {
               layout="fill"
               className={`${styles.footer__icon} scale-95`}
             />
+            <SubButton />
           </div>
           <div className={styles.icon__container}>
             <Image

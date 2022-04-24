@@ -7,6 +7,10 @@ export type Todo = {
   
 }
 
+type UrlPoint = {
+  author: string
+  content: string
+}
 export type TodoProps = {
   todoItems: []
   todo: Todo

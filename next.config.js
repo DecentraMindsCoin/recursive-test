@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require("next-pwa");
-
+require('dotenv').config()
 module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
