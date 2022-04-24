@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Todos } from '../src/Components/Todos'
 import { GraphQLClient } from 'graphql-request'
 import ImageSlider from '../src/Components/ImageSlider'
 import SPA from '../src/Components/SPA'
-import Footer from '../src/Components/Footer'
 import { InferGetStaticPropsType } from 'next'
+import HeroTypeWriter from '../src/Components/HeroTypreWriter'
 
 
 export type ItemsType = {
@@ -37,12 +36,12 @@ const Home = ({
 
         <div className="absolute h-full w-full border-8 border-teal-300 border-t-violet-400 border-b-violet-400 bg-black bg-opacity-50 py-10 shadow-xl shadow-violet-400 ">
           <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase text-teal-300  md:text-6xl">
-            Lets Go Deep!
+           <HeroTypeWriter />
           </h1>
           <div className="flex-row">
-            <div className="mx-auto max-w-5xl py-10 px-5  text-left font-mono text-xl font-extralight tracking-widest text-white md:text-4xl ">
-              The deeper we go the more we discover, there is no more time to
-              ponder! See how deep you can go and what you were ment to find by
+            <div className="mx-auto max-w-5xl py-10 px-5  text-left font-mono text-3xl font-extralight tracking-wide text-white md:text-4xl uppercase">
+              The deeper you go the more you discover, there is no more time to
+              ponder! See how deep you can go, and see what you were ment to find by
               moving closer to your true self...
               <div className="py-20 text-center">
                 <span className="text-2xl font-extrabold text-violet-400">
@@ -50,7 +49,7 @@ const Home = ({
                   <span className="cursor-pointer rounded-full border-2 border-white bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 hover:text-white">
                     Must Do
                   </span>{' '}
-                  Before You Die!
+                  Before You <span className="italic line-through text-gray-300" >Die!</span>
                 </span>
               </div>
             </div>
