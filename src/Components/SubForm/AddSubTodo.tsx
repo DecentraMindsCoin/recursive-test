@@ -2,10 +2,7 @@ import { AddTodoProps } from '../../types'
 
 const AddSubTodo = ({ handleSubmitTodo, task, handleChange }: AddTodoProps) => (
   <div className=" w-full">
-    {' '}
-    {/* <h1 className="py-10 text-center font-mono text-3xl font-bold uppercase text-pink-500">
-      The Awesome Todo App...
-    </h1> */}
+
     <form className="flex w-full justify-between" onSubmit={handleSubmitTodo}>
       <input
         type="text"

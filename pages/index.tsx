@@ -41,9 +41,9 @@ const Home = ({ todoItems }: PropType) => {
               ponder! See how deep you can go and what you were ment to find by
               moving closer to your true self...
               <div className="py-20 text-center">
-                <span className="text-violet-400 ">
+                <span className="text-violet-400 font-extrabold text-2xl">
                   Enter Things You{' '}
-                  <span className="rounded-full border-2 border-white bg-black  bg-awesome-image-2 py-1 px-2 font-extrabold italic leading-loose text-black">
+                  <span className="rounded-full border-2 border-white cursor-pointer hover:bg-awesome-image-3 bg-awesome-image-2 hover:text-white py-1 px-3 font-extrabold italic leading-loose text-black">
                     Must Do
                   </span>{' '}
                   Before You Die!
