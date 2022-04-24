@@ -12,7 +12,7 @@ export const SubRow = ({
          mb-2 flex w-full items-center justify-between p-4
        ${
          isCompleted
-           ? 'bg-gray-400 '
+           ? 'bg-gray-600 '
            : 'bg-opacity-40 border-2 border-teal-400 bg-white '
        }
       `}

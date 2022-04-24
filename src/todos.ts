@@ -28,5 +28,6 @@ export const data = [
     {name: 'a-grey', url: 'https://media.graphassets.com/m05cOYPGTNqwFsNSwGHs'},
     {name: 'rubix', url: 'https://media.graphassets.com/FudPH1JSpOIpHGjjydN2'},
     {name: 'tesserect', url: 'https://media.graphassets.com/2HlzQXNuSSWXum71jrtj'},
+    {name: 'smile', url: 'https://media.graphassets.com/QUGSOG7RQpSVx3KFJXFc'},
   ]
   

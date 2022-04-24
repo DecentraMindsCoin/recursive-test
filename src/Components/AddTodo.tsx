@@ -13,7 +13,7 @@ export const AddTodo = ({
         type="text"
         name="task"
         value={task}
-        className="text-gray-800 mx-2 flex-1 rounded-full  shadow-lg shadow-teal-400 "
+        className="text-gray-800 focus:border-transparent mx-2 flex-1 rounded-full  shadow-lg shadow-teal-400 focus:shadow-fuchsia-300 cursor-pointer"
         onChange={handleChange}
       />
       <button type="submit" aria-label="Add todo">

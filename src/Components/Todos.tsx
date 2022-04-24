@@ -6,7 +6,7 @@ import { data } from '../todos'
 import { AddTodo } from './AddTodo'
 import { Todo } from '../types'
 import Image from 'next/image'
-
+import {allImages} from '../todos'
 export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data)
   const [task, setTask] = useState('')
@@ -75,9 +75,10 @@ export const Todos = () => {
            <p className="text-mono mb-5 text-2xl font-mono tracking-widest  text-center font-bold uppercase text-white text-shadow">
           Set Your Todo!
         </p>
-        <div className='w-96 h-96  relative mx-auto hover:rounded-xl ring-4 ring-white shadow-xl shadow-teal-400 bg-teal-400  cursor-pointer'>
-           <Image src='https://media.graphassets.com/E7FW2hfOTRSQsXLcbUoH' layout='fill' alt='' className='absolute hidden hover:flex  hover:rounded-full bg-teal-400 border-4 border-white' />
-           <Image src='https://media.graphassets.com/ChKWCsyNSc2cPlUqvZ0b' layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' />
+        {}
+        <div className='w-96 h-96  relative mx-auto ring-4 ring-white shadow-xl shadow-teal-400 rounded-full bg-teal-400  cursor-pointer'>
+           <Image src={allImages[8].url} layout='fill' alt='' className='absolute hidden hover:flex  rounded-full bg-teal-400 border-4 border-white' />
+           {/* <Image src={allImages[7].url} layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' /> */}
         </div>
 
        
