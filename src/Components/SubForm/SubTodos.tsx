@@ -69,7 +69,7 @@ const SubTodos = () => {
               handleCheckTodo={handleCheckTodo} todoItems={[]}        />
       ))}
       {!hasTodos && (
-        <p className="mb-5 text-xl text-black uppercase font-bold text-mono">
+        <p className="mb-5 text-xl  text-white uppercase font-bold text-mono">
           Set Your Todo!
         </p>
       )}

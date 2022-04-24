@@ -1,8 +1,11 @@
 import React from 'react'
+import { Todos } from './Todos'
 
 const SPA = () => {
   return (
-    <div>SPA</div>
+    <div>
+      <Todos />
+    </div>
   )
 }
 

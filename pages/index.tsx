@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Todos } from '../src/Components/Todos'
 import { GraphQLClient } from 'graphql-request'
 import ImageSlider from '../src/Components/ImageSlider'
+import SPA from '../src/Components/SPA'
 
 export type ItemsType = {
   id: string
@@ -48,7 +49,8 @@ const Home = ({ todoItems }: PropType) => {
               </div>
             </div>
           </div>
-   <Todos />
+   <SPA />
+
          
           {/* <Todos /> */}
         </div>

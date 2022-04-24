@@ -13,7 +13,7 @@ export const Row = ({
        ${
          isCompleted
            ? 'bg-gray-400 '
-           : 'bg-opacity-60  shadow-teal-300 shadow-lg bg-purple-500 py-10'
+           : 'bg-opacity-60  shadow-teal-300 shadow-lg bg-purple-500 hover:bg-awesome-image py-10'
        }
       `}
   >

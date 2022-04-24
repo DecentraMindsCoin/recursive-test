@@ -55,7 +55,7 @@ export const Todos = () => {
   }
 
   return (
-    <div className='absolute w-full flex-1  h-full px-6'>
+    <div className=' w-full flex-1  h-screen px-6'>
           <section className="mx-auto  items-center max-w-5xl ">
       <AddTodo
         handleChange={handleChange}
@@ -72,12 +72,14 @@ export const Todos = () => {
       ))}
       {!hasTodos && (
         <div>
-           <p className="text-mono mb-5 text-2xl font-serif text-center font-bold uppercase text-violet-400">
+           <p className="text-mono mb-5 text-2xl font-mono tracking-widest  text-center font-bold uppercase text-white text-shadow">
           Set Your Todo!
         </p>
-        <div className='w-96 h-96 relative mx-auto border-2 border-white shadow-xl shadow-teal-400'>
-           <Image src='https://media.graphassets.com/E7FW2hfOTRSQsXLcbUoH' layout='fill' alt='' className='absolute' />
+        <div className='w-96 h-96  relative mx-auto hover:rounded-xl ring-4 ring-white shadow-xl shadow-teal-400 bg-teal-400  cursor-pointer'>
+           <Image src='https://media.graphassets.com/E7FW2hfOTRSQsXLcbUoH' layout='fill' alt='' className='absolute hidden hover:flex  hover:rounded-full bg-teal-400 border-4 border-white' />
+           <Image src='https://media.graphassets.com/ChKWCsyNSc2cPlUqvZ0b' layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' />
         </div>
+
        
         </div>
        
