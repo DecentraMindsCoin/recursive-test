@@ -6,7 +6,7 @@ import { data } from '../todos'
 import { AddTodo } from './AddTodo'
 import { Todo } from '../types'
 import Image from 'next/image'
-import {allImages} from '../todos'
+import { allImages } from '../todos'
 import Footer from './Footer'
 export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data)
@@ -56,45 +56,50 @@ export const Todos = () => {
   }
 
   return (
-    <div className=' w-full flex-1  h-screen px-6'>
-          <section className="mx-auto  items-center max-w-5xl ">
-      <AddTodo
-        handleChange={handleChange}
-        handleSubmitTodo={handleSubmitTodo}
-        task={task}
-      />
-      <div className="h-10" />
-      {todos.map((todo) => (
-        <Row
-          key={todo.id}
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo} todoItems={[]}        />
-      ))}
-      {!hasTodos && (
-        <div>
-           <p className="text-mono mb-5 text-2xl font-mono tracking-widest  text-center font-bold uppercase text-white text-shadow">
-          Set Your Todo!
-        </p>
-        {}
-        <div className='w-full h-96 sm:w-96 sm:h-96 mt-40 flex-1  relative mx-auto sm:ring-4 ring-white shadow-xl shadow-teal-400 rounded-full bg-teal-400  cursor-pointer'>
-           <Image src={allImages[8].url} layout='fill' alt='' className='absolute rounded-full bg-teal-400 border-4 border-white object-cover' />
-           {/* <Image src={allImages[7].url} layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' /> */}
-           <p className='text-white absolute bottom-0 text-center w-full text-2xl pb-5'>#Nacho</p>
-        </div>
-
-       
-        </div>
-       
-      )}
-      {hasTodos && (
-        <p className="py-10 text-white">
-          [{remainingTodos} of {todosLength}] todos remaining
-        </p>
-      )}
-    </section>
-    <Footer />
+    <div className=" h-screen w-full  flex-1 px-6">
+      <section className="mx-auto  max-w-5xl items-center ">
+        <AddTodo
+          handleChange={handleChange}
+          handleSubmitTodo={handleSubmitTodo}
+          task={task}
+        />
+        <div className="h-10" />
+        {todos.map((todo) => (
+          <Row
+            key={todo.id}
+            todo={todo}
+            handleDeleteTodo={handleDeleteTodo}
+            handleCheckTodo={handleCheckTodo}
+            todoItems={[]}
+          />
+        ))}
+        {!hasTodos && (
+          <div>
+            <p className="text-mono text-shadow mb-5 text-center font-mono  text-2xl font-bold uppercase tracking-widest text-white">
+              Set Your Todo!
+            </p>
+            {}
+            <div className="relative mx-auto mt-40 h-96 w-full flex-1  cursor-pointer rounded-full bg-teal-400 shadow-xl shadow-teal-400 ring-white sm:h-96 sm:w-96  sm:ring-4">
+              <Image
+                src={allImages[8].url}
+                layout="fill"
+                alt="jack black in nacho libre smiling"
+                className="absolute rounded-full border-4 border-white bg-teal-400 object-cover"
+              />
+              {/* <Image src={allImages[7].url} layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' /> */}
+              <p className="absolute bottom-0 w-full pb-5 text-center text-2xl text-white">
+                #Nacho
+              </p>
+            </div>
+          </div>
+        )}
+        {hasTodos && (
+          <p className="py-10 text-white">
+            [{remainingTodos} of {todosLength}] todos remaining
+          </p>
+        )}
+      </section>
+      <Footer />
     </div>
-
   )
 }

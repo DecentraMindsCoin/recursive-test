@@ -53,7 +53,7 @@ const Footer = () => {
             src="https://media.graphassets.com/yOjE77mYQD2yX5sAGgPx"
             width="200"
             height="100"
-            alt=""
+            alt="glitchy play button gif image"
             className={styles.play__image}
           />
         </button>
