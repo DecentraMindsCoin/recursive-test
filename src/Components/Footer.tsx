@@ -73,7 +73,7 @@ const Footer = () => {
               layout="fill"
               className={`${styles.footer__icon} scale-95`}
             />
-            <p className={styles.hidden__text}>"Do Something Adventerous!"</p>
+            <p className={styles.hidden__text}>"Do Something Adventurous!"</p>
           </div>{' '}
           <br />
           <SubButton />
@@ -97,7 +97,7 @@ const Footer = () => {
               className={`${styles.footer__icon} scale-75`}
             />
             <p className={`${styles.hidden__text} px-12`}>
-              "Do More With Your Family!"
+              "Do More Creative Things!"
             </p>
           </div>
           <br />
