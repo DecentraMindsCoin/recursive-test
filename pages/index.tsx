@@ -46,9 +46,9 @@ const Home = ({
                 doing the things that make you happy.
                 <div className="py-20 text-center">
                   <span className="text-2xl font-extrabold text-violet-400">
-                    Enter Things you want {' '}
+                    Enter Things you will {' '}
                     <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black shadow-xl shadow-teal-300 hover:bg-awesome-image-3 hover:text-white hover:shadow-violet-400">
-                      To do
+                      do
                     </span>{' '}
                    while {''}
                     <span className="italic text-gray-300 ">

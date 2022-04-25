@@ -24,7 +24,7 @@ export const Row = ({
         `}
     >
       <p className="font-extrabold">
-        I Must... <span className="text-teal-300"> {task}</span>
+        I will... <span className="text-teal-300"> {task}</span>
       </p>
     </div>
     <SubButton />
