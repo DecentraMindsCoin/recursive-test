@@ -40,19 +40,19 @@ const Home = ({
               <HeroTypeWriter />
             </h1>
             <div className="flex-row">
-              <div className="mx-auto max-w-5xl py-10 px-5  text-left  text-3xl font-extrabold uppercase  text-white md:text-4xl font-sans">
+              <div className="mx-auto max-w-5xl py-10 px-5  text-left  font-sans text-3xl font-extrabold  uppercase text-white md:text-4xl">
                 The deeper you go the more you discover, there is no more time
-                to ponder! See how deep you can go, and see what you were ment
-                to find by moving closer to your true self...
+                to ponder! See how deep you can go, and see what can come from
+                doing the things that make you happy.
                 <div className="py-20 text-center">
                   <span className="text-2xl font-extrabold text-violet-400">
-                    Enter Things You{' '}
-                    <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 shadow-teal-300 hover:shadow-violet-400 shadow-xl hover:text-white">
-                      Must Do
+                    Enter Things you want {' '}
+                    <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black shadow-xl shadow-teal-300 hover:bg-awesome-image-3 hover:text-white hover:shadow-violet-400">
+                      To do
                     </span>{' '}
-                    Before You{' '}
-                    <span className="italic text-gray-300 line-through">
-                      Die!
+                   while {''}
+                    <span className="italic text-gray-300 ">
+                       your alive!
                     </span>
                   </span>
                 </div>
@@ -71,8 +71,6 @@ const Home = ({
 export default Home
 
 export async function getStaticSideProps() {
-
-  
   // remove link and use URLPOINT inside .env variable in production. Errors defining 'types' will patch later.
 
   const UrlPoint = process.env.ENDPOINT
