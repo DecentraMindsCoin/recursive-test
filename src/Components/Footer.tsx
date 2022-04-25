@@ -10,7 +10,7 @@ const Footer = () => {
     icon__container:
       'relative mx-auto h-40 w-full rounded-xl hover:scale-105 cursor-pointer',
     footer__icon:
-      'absolute object-cover rounded-xl hover:rounded-full hover:opacity-50 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 ',
+      'absolute object-cover rounded-xl hover:rounded-full hover:opacity-10 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 ',
     explore__header:
       'w-full rounded-xl bg-awesome-image-2 py-10 pb-10 text-3xl font-extrabold text-black md:text-4xl',
     flex__row: 'flex justify-between pt-32',

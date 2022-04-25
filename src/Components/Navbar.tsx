@@ -5,27 +5,15 @@ import { MenuAlt1Icon, XIcon, UserIcon } from "@heroicons/react/solid";
 
 const NavLinks = [
   {
-    linkName: "Vision",
+    linkName: "To Do..",
     link: "/vision",
   },
 
   {
-    linkName: "About Me",
+    linkName: "Not To Do..",
     link: "/about",
   },
-  {
-    linkName: "Works",
-    link: "/works",
-  },
-  {
-    linkName: "Creations",
-    link: "/creations",
-  },
 
-  // {
-  //   linkName: "Videos",
-  //   link: "/videos",
-  // },
 ];
 
 export const Navbar = () => {
@@ -41,8 +29,8 @@ export const Navbar = () => {
   };
 
   return (
-    <div className=" absolute top-0 w-full overflow-x-hidden uppercase">
-      <div className=" py-2 z-20 px-5 lg:flex items-center  bg-transparent bg-opacity-90 z-100 relative">
+    <div className=" top-0 w-full overflow-x-hidden scrollbar-hidden uppercase">
+      <div className={`${active ? "bg-black bg-opacity-90 " : "bg-transparent"} py-2 z-20 px-5 lg:flex items-center  z-100 relative`} >
         <div className=" item-center h-12 w-12 relative ">
           <a className="relative" href="/">
             <div className="h-12 w-12 relative rounded-xl border-2 border-white">
@@ -76,15 +64,15 @@ export const Navbar = () => {
           }    w-full lg:block lg:w-auto mx-auto flex-shrink`}
         >
           <div className=" bg-opacity-50 shadow-black lg:bg-opacity-0 py-5 rounded-xl lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-center flex flex-col lg:h-auto px-10 ">
-            <div className="lg:flex w-full">
+            <div className="lg:flex w-full text-white ">
               {NavLinks.map((nav, index) => (
                 <div
                   key={index}
-                  className="cursor-pointer border-b border-white lg:border-b-0"
+                  className="cursor-pointer hover:text-black border-b border-white lg:border-b-0"
                 >
                   <Link href={nav.link}>
-                    <div className="lg:inline-flex lg:w-auto px-2 pr-5 py-4 active:bg-purple-500 hover:pr-16  hover:bg-awesome-image-2 rounded-xl text-gray-200 font-bold items-center  justify-center  hover:text-gray-200 hover:scale-110 transition duration-200 transform ease-out">
-                      <h1 id="glitch" className="text-gray-200  text-center">
+                    <div className="lg:inline-flex lg:w-auto px-2 pr-5 py-4 active:bg-purple-500 hover:pr-16  hover:bg-awesome-image-2 rounded-xl font-bold items-center  justify-center   hover:scale-110 transition duration-200 transform ease-out">
+                      <h1 id="glitch" className="   text-center">
                         {nav.linkName}
                       </h1>
                     </div>

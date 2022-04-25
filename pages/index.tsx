@@ -7,7 +7,6 @@ import { InferGetStaticPropsType } from 'next'
 import HeroTypeWriter from '../src/Components/HeroTypreWriter'
 import Navbar from '../src/Components/Navbar'
 
-
 export type ItemsType = {
   id: string
   name: string
@@ -26,40 +25,45 @@ const Home = ({
   todoItems,
 }: InferGetStaticPropsType<typeof getStaticSideProps>) => {
   return (
-    <div className="relative h-full overflow-auto bg-black">
+    <div className="relative h-screen  overflow-auto bg-black">
       <Head>
         <title>Recursive Challenge Todo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<Navbar />
-      <div className="relative flex h-screen flex-col items-center justify-center bg-black py-2">
-        <ImageSlider />
+      <>
+        <Navbar />
+        <div className="flex h-full flex-col items-center justify-center bg-black py-2">
+          <ImageSlider />
 
-        <div className="absolute h-full w-full border-8 border-teal-300 border-t-violet-400 border-b-violet-400 bg-black bg-opacity-50 py-10 shadow-xl shadow-violet-400 ">
-          <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase text-teal-300  md:text-6xl">
-           <HeroTypeWriter />
-          </h1>
-          <div className="flex-row">
-            <div className="mx-auto max-w-5xl py-10 px-5  text-left font-mono text-3xl font-extralight tracking-wide text-white md:text-4xl uppercase">
-              The deeper you go the more you discover, there is no more time to
-              ponder! See how deep you can go, and see what you were ment to find by
-              moving closer to your true self...
-              <div className="py-20 text-center">
-                <span className="text-2xl font-extrabold text-violet-400">
-                  Enter Things You{' '}
-                  <span className="cursor-pointer rounded-full border-2 border-white bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 hover:text-white">
-                    Must Do
-                  </span>{' '}
-                  Before You <span className="italic line-through text-gray-300" >Die!</span>
-                </span>
+          <div className="absolute h-full w-full border-8 border-teal-300 border-t-violet-400 border-b-violet-400 bg-black bg-opacity-50 py-10 shadow-xl shadow-violet-400 ">
+            <h1 className="py-10 text-center font-mono text-5xl font-bold uppercase text-teal-300  md:text-6xl">
+              <HeroTypeWriter />
+            </h1>
+            <div className="flex-row">
+              <div className="mx-auto max-w-5xl py-10 px-5  text-left font-mono text-3xl font-extralight uppercase tracking-wide text-white md:text-4xl">
+                The deeper you go the more you discover, there is no more time
+                to ponder! See how deep you can go, and see what you were ment
+                to find by moving closer to your true self...
+                <div className="py-20 text-center">
+                  <span className="text-2xl font-extrabold text-violet-400">
+                    Enter Things You{' '}
+                    <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 hover:text-white">
+                      Must Do
+                    </span>{' '}
+                    Before You{' '}
+                    <span className="italic text-gray-300 line-through">
+                      Die!
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <SPA />
+            <SPA />
 
-          {/* <Todos /> */}
+            {/* <Todos /> */}
+          </div>
         </div>
-      </div>
+      </>
     </div>
   )
 }
@@ -70,7 +74,9 @@ export async function getStaticSideProps() {
   // const UrlPoint = process.env.ENDPOINT
 
   const UrlPoint = process.env.ENDPOINT
-  const graphcms = new GraphQLClient("https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master")
+  const graphcms = new GraphQLClient(
+    'https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master'
+  )
 
   const { todoItems } = await graphcms.request(
     `{
