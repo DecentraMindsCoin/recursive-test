@@ -7,11 +7,11 @@ const Footer = () => {
   // Footer Inline Tailwind Removed
   const styles = {
     wrapper:
-      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white max-w-5xl flex-1 mx-auto',
+      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white w-full flex-1 mx-auto',
     explore__header:
-      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black cursor-pointer  hover:text-white md:text-4xl ',
+      'w-full rounded-xl  bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black cursor-pointer  hover:text-white md:text-4xl ',
     p__wrapper:
-      'text-left text-xl sm:text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
+      'text-left  text-xl sm:text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
     p__span:
       ' cursor-pointer  italic text-teal-300 hover:underline shadow-xl hover:shadow-teal-300',
     icon__container:
@@ -19,9 +19,9 @@ const Footer = () => {
     footer__icon:
       'absolute object-cover rounded-xl hover:rounded-full hover:opacity-10 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 ',
 
-    flex__row: 'flex justify-between pt-24',
+    flex__row: 'justify-between pt-24',
 
-    grid__rows: 'grid-row-4 grid h-1/2 w-full space-y-5 relative py-24',
+    grid__rows: ' grid-row-4 grid h-1/2 w-full space-y-5 relative py-24',
     button:
       'py-2  max-w-xs mx-auto text-white hover:text-black rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
     button__text: 'font-semibold tracking-widest  hover:text-black',
@@ -40,7 +40,6 @@ const Footer = () => {
   // Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
   return (
     <div className={styles.wrapper}>
-      <div className=''>
 
    
       <h1 className={styles.explore__header}>Explore Things To Do!</h1>
@@ -137,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>   </div>
+    </div>   
   )
 }
 

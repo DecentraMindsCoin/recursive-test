@@ -76,7 +76,7 @@ export const Todos = () => {
         {!hasTodos && (
           <div>
             <p className="text-mono text-shadow mb-5 text-center font-mono  text-2xl font-bold uppercase tracking-widest text-white">
-              Set Your Todo!
+              Set Your Todo's!
             </p>
             {}
             <div className="relative mx-auto mt-40 h-96 w-full flex-1  cursor-pointer rounded-full bg-teal-400 shadow-xl shadow-teal-400 ring-white sm:h-96 sm:w-96  sm:ring-4">

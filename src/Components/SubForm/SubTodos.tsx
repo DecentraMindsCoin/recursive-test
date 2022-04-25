@@ -70,7 +70,7 @@ const SubTodos = () => {
       ))}
       {!hasTodos && (
         <p className="mb-5 text-xl  text-white uppercase font-bold text-mono">
-          Set Your Todo!
+          Set Your Todos!
         </p>
       )}
       {hasTodos && (
