@@ -89,8 +89,8 @@ export const Navbar = () => {
                 </Link>
               </div>
               <div className="pt-5  lg:pl-10 lg:pt-0 ">
-                <Link href="/hireme">
-                  <button className="block w-56 lg:w-28 border-2 border-purple-500 transition  uppercase ease-in-out duration-200 bg-transparent hover:animate-none hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium hover:bg-awesome-image-2 text-gray-200 py-2 shadow-cyan-300 shadow-lg">
+                <Link href="/">
+                  <button className="block w-56 lg:w-28 border-2 border-purple-500 transition  uppercase ease-in-out duration-200 bg-transparent hover:animate-none hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium hover:bg-awesome-image-2 text-gray-200 py-2 shadow-cyan-300 shadow-lg hover:text-black">
                     Hire Me
                   </button>
                 </Link>
