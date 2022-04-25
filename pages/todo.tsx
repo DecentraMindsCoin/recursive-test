@@ -121,9 +121,14 @@ const Todo = ({
                 className="absolute object-cover"
                 alt="Cool morphing shape image"
               />
-            </div>{' '}
+            </div>{' '}   <div className="w-full flex-row bg-black">
+            <h1 className="w-full text-center text-2xl uppercase text-teal-300">
+              Keep Doing...
+            </h1>
+            <SubButton />
+          </div>
           </div>{' '}
-          <div className="bg-black px-5 pb-10">
+          {/* <div className="bg-black px-5 pb-10">
             <Link href="/">
               <a target="/">
                 <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300   py-2 text-center font-sans font-bold uppercase shadow-lg shadow-teal-300 bg-awesome-image-1 text-white hover:text-white hover:shadow-violet-400 ">
@@ -131,13 +136,8 @@ const Todo = ({
                 </button>
               </a>
             </Link>
-          </div>
-          <div className="w-full flex-row bg-black">
-            <h1 className="w-full text-center text-2xl uppercase text-teal-300">
-              Keep Doing...
-            </h1>
-            <SubButton />
-          </div>
+          </div> */}
+       
         </div>
       </div>
     </>
