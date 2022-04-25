@@ -69,7 +69,7 @@ const NotTodo = ({
             <div className="bg-black px-5 pb-10  absolute bottom-20 w-full">
               <Link href="/">
                 <a target="/">
-                  <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300 bg-awesome-image-2  py-2 text-center font-sans font-bold uppercase text-black shadow-lg shadow-teal-300 hover:bg-awesome-image-3 hover:text-white hover:shadow-violet-400 ">
+                  <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300  py-2 text-center font-sans font-bold uppercase text-white shadow-lg shadow-teal-300 bg-awesome-image-1 hover:text-white hover:shadow-violet-400 ">
                     Go Back
                   </button>
                 </a>

@@ -9,7 +9,7 @@ const Footer = () => {
     wrapper:
       'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white sm:max-w-5xl mx-auto',
     explore__header:
-      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-white md:text-4xl ',
+      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black cursor-pointer  hover:text-white md:text-4xl ',
     p__wrapper:
       'text-left text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
     p__span:
@@ -23,8 +23,8 @@ const Footer = () => {
 
     grid__rows: 'grid-row-4 grid h-1/2 w-full space-y-5 relative py-24',
     button:
-      'py-2  max-w-xs mx-auto text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
-    button__text: 'font-semibold tracking-widest text-white hover:text-black',
+      'py-2  max-w-xs mx-auto text-white hover:text-black rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
+    button__text: 'font-semibold tracking-widest  hover:text-black',
     play__button:
       'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-teal-300 hover:border-violet-400 border-8 shadow-lg shadow-teal-400 hover:shadow-fuchsia-300',
     play__image: 'absolute top-0 object-cover rounded-full hover:opacity-50 ',

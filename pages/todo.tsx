@@ -9,7 +9,7 @@ import { InferGetServerSidePropsType } from 'next'
 
 const styles = {
   p__todo:
-    'pt-10 text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:text-black hover:bg-awesome-image-3 cursor-pointer',
+    'pt-10 text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:text-black hover:bg-awesome-image-2 cursor-pointer',
 }
 
 const Todo = ({
@@ -55,12 +55,18 @@ const Todo = ({
                       that you love...
                     </span>
                   </p>
-                  <p className={`${styles.p__todo}  `}>
-                    Hire{' '}
-                    <span className="rounded-full border-2 p-3 font-bold italic text-teal-300 hover:bg-awesome-image-2 hover:text-black">
-                      Me!
-                    </span>
-                  </p>
+                  <Link href="https://www.decentraminds.com/hireme">
+                    <a>
+                      {' '}
+                      <p className={`${styles.p__todo}  `}>
+                        Hire{' '}
+                        <span className="rounded-full border-2 p-3 font-bold italic hover:text-white  text-teal-300 hover:bg-awesome-image-1 ">
+                          Me!
+                        </span>
+                      </p>
+                    </a>
+                  </Link>
+
                   <br />
                 </div>
 
@@ -115,7 +121,7 @@ const Todo = ({
           <div className="bg-black px-5 pb-10">
             <Link href="/">
               <a target="/">
-                <button className=" mx-auto w-full max-w-3xl  shadow-lg hover:shadow-violet-400 shadow-teal-300 rounded-full  border-4 border-teal-300 bg-awesome-image-2 py-2 text-center font-sans font-bold uppercase text-black hover:bg-awesome-image-3 hover:text-white ">
+                <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300   py-2 text-center font-sans font-bold uppercase shadow-lg shadow-teal-300 bg-awesome-image-1 text-white hover:text-white hover:shadow-violet-400 ">
                   Go Back
                 </button>
               </a>

@@ -17,7 +17,7 @@ export const AddTodo = ({
         onChange={handleChange}
       />
       <button type="submit" aria-label="Add todo">
-        <h1 className="rounded-full border-2 px-3 py-1 shadow-xl font-bold shadow-black text-2xl ring-4 ring-teal-300 bg-awesome-image-2 text-black ">
+        <h1 className="rounded-full border-2 px-3 py-1 shadow-xl font-bold shadow-black text-2xl  bg-awesome-image-2 text-black ">
           +
         </h1>
       </button>

@@ -90,7 +90,7 @@ export const Navbar = () => {
               <div className="space-y-6 md:space-x-1 lg:flex lg:space-y-0 lg:pl-6">
                 <Link href="/todo">
                   <button
-                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500  py-2 text-sm font-extrabold uppercase text-white transition ease-in-out hover:scale-110 lg:w-28 bg-awesome-image-3`}
+                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500  py-2 text-sm font-extrabold uppercase text-white transition ease-in-out hover:scale-110 lg:w-28 bg-awesome-image-1`}
                   >
                     <p className="">Lets Chat</p>
                   </button>
