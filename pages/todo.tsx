@@ -22,8 +22,8 @@ const Todo = ({
         <Navbar />
         <div className="relative h-screen w-full bg-black text-center font-bold  text-white">
           <div className="relative h-screen">
-            <div className="absolute top-1/3 mx-auto w-full  flex-row  space-y-5 px-4  ">
-              <h1 className="text-center font-sans text-7xl font-bold uppercase text-teal-300 ">
+            <div className=" mx-auto w-full  flex-row  space-y-5 px-4  ">
+              <h1 className="text-center font-sans text-3xl sm:text-5xl font-bold uppercase text-teal-300 ">
                 Other Things to do!{' '}
               </h1>
               <div className="relative w-full ">

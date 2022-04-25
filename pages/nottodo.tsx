@@ -15,11 +15,11 @@ const NotTodo = ({
         <Navbar />
         <div className="relative h-screen w-full bg-black text-center text-white">
           <div className="relative h-screen">
-            <div className="absolute top-1/3 mx-auto w-full  flex-row  space-y-5 px-4">
-              <h1 className="px-4 font-sans text-7xl font-bold uppercase text-teal-300 ">
+            <div className=" mx-auto w-full  flex-row  space-y-5 px-4">
+              <h1 className="px-4 font-sans text-3xl sm:text-3xl lg:text-5xl font-bold uppercase text-teal-300">
                 Things not to do!{' '}
               </h1>
-              <p className="px-5 pt-10 text-4xl font-bold uppercase">
+              <p className="px-5 pt-10 text-xl sm:text-2xl md:text-4xl font-bold uppercase pb-10 ">
                 Do not forget to{' '}
                 <span className="italic text-teal-300">go do something...</span>
               </p>{' '}
