@@ -77,7 +77,7 @@ export const Todos = () => {
           Set Your Todo!
         </p>
         {}
-        <div className='w-full h-96 sm:w-96 sm:h-96 flex-1  relative mx-auto sm:ring-4 ring-white shadow-xl shadow-teal-400 rounded-full bg-teal-400  cursor-pointer'>
+        <div className='w-full h-96 sm:w-96 sm:h-96 mt-40 flex-1  relative mx-auto sm:ring-4 ring-white shadow-xl shadow-teal-400 rounded-full bg-teal-400  cursor-pointer'>
            <Image src={allImages[8].url} layout='fill' alt='' className='absolute rounded-full bg-teal-400 border-4 border-white object-cover' />
            {/* <Image src={allImages[7].url} layout='fill' alt='' className='absolute hover:hidden hover:rounded-full border-4 border-white' /> */}
            <p className='text-white absolute bottom-0 text-center w-full text-2xl pb-5'>#Nacho</p>

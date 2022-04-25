@@ -32,7 +32,7 @@ const Home = ({
       </Head>
       <>
         <Navbar />
-        <div className="flex h-full flex-col items-center justify-center bg-black py-2">
+        <div className="flex h-full flex-col items-center justify-center bg-black">
           <ImageSlider />
 
           <div className="absolute h-full w-full border-8 border-teal-300 border-t-violet-400 border-b-violet-400 bg-black bg-opacity-50 py-10 shadow-xl shadow-violet-400 ">
@@ -40,7 +40,7 @@ const Home = ({
               <HeroTypeWriter />
             </h1>
             <div className="flex-row">
-              <div className="mx-auto max-w-5xl py-10 px-5  text-left font-mono text-3xl font-extralight uppercase tracking-wide text-white md:text-4xl">
+              <div className="mx-auto max-w-5xl py-10 px-5  text-left  text-3xl font-extrabold uppercase  text-white md:text-4xl font-sans">
                 The deeper you go the more you discover, there is no more time
                 to ponder! See how deep you can go, and see what you were ment
                 to find by moving closer to your true self...
@@ -71,7 +71,9 @@ const Home = ({
 export default Home
 
 export async function getStaticSideProps() {
-  // const UrlPoint = process.env.ENDPOINT
+
+  
+  // remove link and use URLPOINT inside .env variable in production. Errors defining 'types' will patch later.
 
   const UrlPoint = process.env.ENDPOINT
   const graphcms = new GraphQLClient(

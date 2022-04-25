@@ -6,32 +6,32 @@ const Footer = () => {
   // Footer Inline Tailwind Removed
   const styles = {
     wrapper:
-      'relative mt-40 h-full  rounded-t-2xl border-4 border-teal-300 border-b-transparent  black  text-center uppercase text-white max-w-5xl mx-auto',
+      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  black  text-center uppercase text-white sm:max-w-5xl mx-auto',
     explore__header:
-      'w-full rounded-xl bg-awesome-image-2 py-10 pb-10 text-3xl font-extrabold text-black md:text-4xl',
-    p__wrapper: ' text-3xl px-5 pt-20 w-full text-center font-extrabold uppercase',
-    p__span: "cursor-pointer  italic text-teal-300 hover:underline",
+      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black md:text-4xl',
+    p__wrapper: 'text-left text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
+    p__span: " cursor-pointer  italic text-teal-300 hover:underline",
     icon__container:
       'relative mx-auto h-40 w-full rounded-xl hover:scale-105 cursor-pointer',
     footer__icon:
       'absolute object-cover rounded-xl hover:rounded-full hover:opacity-10 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 ',
 
-    flex__row: 'flex justify-between pt-32',
+    flex__row: 'flex justify-between pt-24',
 
-    grid__rows: 'grid-row-4 grid h-1/2 w-full space-y-5 px-10 relative',
+    grid__rows: 'grid-row-4 grid h-1/2 w-full space-y-5 relative py-24',
     button:
-      'py-2  text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  bottom-10 relative  ',
+      'py-2  max-w-xs mx-auto text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
     button__text: 'font-semibold tracking-widest text-white hover:text-black',
     play__button:
-      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto h-32 w-96 rounded-full mt-20  border-white border-2 ',
-    play__image: 'absolute top-0 object-cover rounded-full ',
-    hidden__text: 'px-8 pt-16 font-bold uppercase italic tracking-wide',
-    explore__button: 'w-full text-center font-extrabold uppercase',
+      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-white border-2 ',
+    play__image: 'absolute top-0 object-cover rounded-full hover:opacity-50 ',
+    hidden__text: 'px-8 pt-16 font-bold font-sans uppercase italic tracking-wide',
+    explore__button: '  w-full text-center font-extrabold font-sans uppercase ',
   }
-
+// Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.explore__header}>Explore Things To Do!</h1>{' '}
+      <h1 className={styles.explore__header}>Explore Things To Do!</h1>
       <p className={styles.p__wrapper}>
         <span className={styles.p__span}>
           {' '}
@@ -42,13 +42,9 @@ const Footer = () => {
           {' '}
           not to do
         </span>
-        , that is the question...
+        , that is the question...Don't overcomplicate it, just start by doing the <span className="text-teal-400">things</span>  that make you happy. 
       </p>
-      <p className=" px-5 text-3xl tracking-widest text-white md:text-4xl">
-        <span className="cursor-pointer text-base italic text-gray-300 hover:underline">
-          Hover to discover...
-        </span>
-      </p>
+   
       <div>
         <button className={styles.play__button}>
           <Image
@@ -60,6 +56,11 @@ const Footer = () => {
           />
         </button>
       </div>
+      <p className="pt-10 px-5 text-3xl tracking-widest text-white md:text-4xl">
+        <span className="cursor-pointer vfont-sans  text-base italic text-gray-300 hover:underline">
+          Hover to discover...
+        </span>
+      </p>
       <div className={styles.flex__row}>
         <div className={styles.grid__rows}>
           <div className={styles.icon__container}>
@@ -71,6 +72,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do Something Adventerous!"</p>
           </div>{' '}
+          <br/>
           <SubButton />
           <div className={styles.icon__container}>
             <Image
@@ -93,6 +95,7 @@ const Footer = () => {
             />
             <p className={`${styles.hidden__text} px-12`}>"Do More With Your Family!"</p>
           </div>
+          <br/>
           <SubButton />
           <div className={styles.icon__container}>
             <Image
@@ -103,6 +106,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do More!"</p>
           </div>
+          <br/>
           <SubButton />
           <div className={`${styles.icon__container} w-1/2`}>
             <Image
@@ -113,6 +117,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do!"</p>
           </div>
+          <br/>
           <SubButton />
           <div className={styles.button}>
             <button className={styles.explore__button}>

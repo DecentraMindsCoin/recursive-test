@@ -49,7 +49,7 @@ export const Navbar = () => {
 
         <button
           aria-label="top right"
-          className="absolute right-5 top-3 h-10 w-10 transform rounded border-2 border-white bg-purple-500 text-gray-200 outline-none transition duration-200 ease-in-out hover:bg-awesome-image-2 hover:text-black   active:bg-white lg:hidden"
+          className="absolute right-5 top-3 h-10 w-10 transform rounded border-2 border-white bg-purple-500 text-gray-200 outline-none transition duration-200 ease-in-out hover:bg-awesome-image-2 hover:text-black   active:bg-white lg:hidden shadow-lg hover:shadow-teal-300"
           onClick={handleClick}
         >
           <div className={`${active ? 'hidden ' : 'block'}  m-1 `}>
@@ -65,12 +65,12 @@ export const Navbar = () => {
             active ? 'flex w-full' : 'hidden '
           }    mx-auto w-full flex-shrink lg:block lg:w-auto`}
         >
-          <div className=" flex w-full flex-col items-center rounded-xl bg-opacity-50 py-5 px-10 shadow-black lg:ml-auto lg:inline-flex lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:bg-opacity-0 ">
+          <div className=" flex w-full flex-col items-center rounded-xl bg-opacity-50 py-5 px-10  lg:ml-auto lg:inline-flex lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:bg-opacity-0 ">
             <div className="w-full text-white lg:flex ">
               {NavLinks.map((nav, index) => (
                 <div
                   key={index}
-                  className="cursor-pointer border-b border-white hover:text-black lg:border-b-0"
+                  className="hover:line-through  cursor-pointer border-b border-white hover:text-black lg:border-b-0"
                 >
                   <Link href={nav.link}>
                     <div className="transform items-center justify-center rounded-xl px-2 py-4 pr-5  font-bold transition duration-200 ease-out  hover:scale-110   hover:bg-awesome-image-2 hover:pr-16 active:bg-purple-500 lg:inline-flex lg:w-auto">
@@ -82,11 +82,15 @@ export const Navbar = () => {
                 </div>
               ))}
             </div>{' '}
-            <div className="relative mx-auto flex-row  py-10 lg:flex lg:py-0 lg:pt-0">
+            <div
+              className={`${
+                active ? 'relative ' : 'absolute'
+              } right-5  flex-row py-10 lg:flex lg:py-0 lg:pt-0`}
+            >
               <div className="space-y-6 md:space-x-1 lg:flex lg:space-y-0 lg:pl-6">
                 <Link href="/todo">
                   <button
-                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500 bg-white py-2 text-sm font-medium uppercase text-gray-700 transition ease-in-out hover:scale-110 lg:w-28 `}
+                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500  py-2 text-sm font-medium uppercase text-gray-300 transition ease-in-out hover:scale-110 lg:w-28 bg-awesome-image-3`}
                   >
                     <p className="">Lets Chat</p>
                   </button>
@@ -94,7 +98,7 @@ export const Navbar = () => {
               </div>
               <div className="pt-5  lg:pl-10 lg:pt-0 ">
                 <Link href="/todo">
-                  <button className="z-100 item-center block w-56 transform rounded-3xl  border-2 border-purple-500 bg-transparent py-2 text-sm font-medium uppercase text-gray-200 shadow-lg shadow-cyan-300 transition duration-200 ease-in-out hover:scale-110 hover:animate-none hover:bg-awesome-image-2 hover:text-black lg:w-28">
+                  <button className="z-100 item-center block w-56 transform rounded-3xl  border-2 border-purple-500 bg-transparent py-2 text-sm font-medium uppercase text-gray-200 shadow-lg hover:shadow-cyan-300 transition duration-200 ease-in-out hover:scale-110 hover:animate-none hover:bg-awesome-image-2 hover:text-black lg:w-28 ">
                     Hire Me
                   </button>
                 </Link>

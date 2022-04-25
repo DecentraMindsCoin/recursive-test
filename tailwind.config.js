@@ -11,7 +11,7 @@ module.exports = {
         "awesome-image-2":
           "url('https://media.graphassets.com/ebuYeLSxRBeQNRUZzQ5A')",
         "awesome-image-3":
-          "url('https://media.graphassets.com/TL86ArbnTYmsb8MIXR5t')",
+          "url('https://media.graphassets.com/spy0H023S62OaDIOts7q')",
 
       },
     },
