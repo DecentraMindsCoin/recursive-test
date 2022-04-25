@@ -40,7 +40,7 @@ const Footer = () => {
   // Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
   return (
     <div className={styles.wrapper}>
-
+      <div className=''>
 
    
       <h1 className={styles.explore__header}>Explore Things To Do!</h1>
@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>  
+    </div>   </div>
   )
 }
 
