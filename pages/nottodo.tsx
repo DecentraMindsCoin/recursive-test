@@ -36,6 +36,7 @@ const NotTodo = ({
                 src={todoItems[3].image[0].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 sm:flex  md:hidden">
@@ -43,6 +44,7 @@ const NotTodo = ({
                 src={todoItems[3].image[1].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 md:flex lg:hidden">
@@ -50,6 +52,7 @@ const NotTodo = ({
                 src={todoItems[3].image[2].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 lg:flex xl:hidden">
@@ -57,6 +60,7 @@ const NotTodo = ({
                 src={todoItems[3].image[3].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 xl:flex ">
@@ -64,12 +68,13 @@ const NotTodo = ({
                 src={todoItems[3].image[4].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>{' '}
-            <div className="bg-black px-5 pb-10  absolute bottom-20 w-full">
+            <div className="absolute bottom-20 w-full  bg-black px-5 pb-10">
               <Link href="/">
                 <a target="/">
-                  <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300  py-2 text-center font-sans font-bold uppercase text-white shadow-lg shadow-teal-300 bg-awesome-image-1 hover:text-white hover:shadow-violet-400 ">
+                  <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300  bg-awesome-image-1 py-2 text-center font-sans font-bold uppercase text-white shadow-lg shadow-teal-300 hover:text-white hover:shadow-violet-400 ">
                     Go Back
                   </button>
                 </a>

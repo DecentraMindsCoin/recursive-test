@@ -87,6 +87,7 @@ const Todo = ({
                 src={todoItems[2].image[0].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 sm:flex  md:hidden">
@@ -94,6 +95,7 @@ const Todo = ({
                 src={todoItems[2].image[0].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 md:flex lg:hidden">
@@ -101,6 +103,7 @@ const Todo = ({
                 src={todoItems[2].image[1].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 lg:flex xl:hidden">
@@ -108,6 +111,7 @@ const Todo = ({
                 src={todoItems[2].image[2].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>
             <div className="relative hidden h-96 w-full flex-1 xl:flex ">
@@ -115,6 +119,7 @@ const Todo = ({
                 src={todoItems[2].image[3].url}
                 layout="fill"
                 className="absolute object-cover"
+                alt="Cool morphing shape image"
               />
             </div>{' '}
           </div>{' '}
