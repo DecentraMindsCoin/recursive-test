@@ -1,45 +1,47 @@
-import Link from "next/link";
-import { useState } from "react";
-import Image from "next/image";
-import { MenuAlt1Icon, XIcon, UserIcon } from "@heroicons/react/solid";
+import Link from 'next/link'
+import { useState } from 'react'
+import Image from 'next/image'
+import { MenuAlt1Icon, XIcon, UserIcon } from '@heroicons/react/solid'
 
 const NavLinks = [
   {
-    linkName: "To Do..",
-    link: "/vision",
+    linkName: 'To Do..',
+    link: '/todo',
   },
 
   {
-    linkName: "Not To Do..",
-    link: "/about",
+    linkName: 'Not To Do..',
+    link: '/nottodo',
   },
-
-];
+]
 
 export const Navbar = () => {
-
   const styles = {
-    chatButton: 'shadow-cyan-300 shadow-lg'
+    chatButton: 'shadow-cyan-300 shadow-lg',
   }
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
 
   const handleClick = () => {
-    setActive(!active);
-  };
+    setActive(!active)
+  }
 
   return (
-    <div className=" top-0 w-full overflow-x-hidden scrollbar-hidden uppercase">
-      <div className={`${active ? "bg-black bg-opacity-90 " : "bg-transparent"} py-2 z-20 px-5 lg:flex items-center  z-100 relative`} >
-        <div className=" item-center h-12 w-12 relative ">
+    <div className=" scrollbar-hidden top-0 w-full overflow-x-hidden uppercase">
+      <div
+        className={`${
+          active ? 'bg-black bg-opacity-90 ' : 'bg-transparent'
+        } z-100 relative z-20 items-center py-2  px-5 lg:flex`}
+      >
+        <div className=" item-center relative h-12 w-12 ">
           <a className="relative" href="/">
-            <div className="h-12 w-12 relative rounded-xl border-2 border-white">
+            <div className="relative h-12 w-12 rounded-xl border-2 border-white">
               <Image
                 layout="fill"
                 objectFit="cover"
-                className="cursor-pointer absolute rounded-xl  "
+                className="absolute cursor-pointer rounded-xl  "
                 alt="header-image"
-                src='/favicon.ico'
+                src="/favicon.ico"
               />
             </div>
           </a>
@@ -47,31 +49,31 @@ export const Navbar = () => {
 
         <button
           aria-label="top right"
-          className="absolute hover:bg-awesome-image-2 hover:text-black outline-none active:bg-white transition duration-200 transform ease-in-out right-5 top-3 w-10 h-10 bg-purple-500 rounded lg:hidden text-gray-200   border-2 border-white"
+          className="absolute right-5 top-3 h-10 w-10 transform rounded border-2 border-white bg-purple-500 text-gray-200 outline-none transition duration-200 ease-in-out hover:bg-awesome-image-2 hover:text-black   active:bg-white lg:hidden"
           onClick={handleClick}
         >
-          <div className={`${active ? "hidden " : "block"}  m-1 `}>
+          <div className={`${active ? 'hidden ' : 'block'}  m-1 `}>
             <MenuAlt1Icon />
           </div>
-          <div className={`${active ? "animate-spin-slow" : "hidden"}  m-1 `}>
+          <div className={`${active ? 'animate-spin-slow' : 'hidden'}  m-1 `}>
             <XIcon />
           </div>
         </button>
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
           className={`${
-            active ? "w-full flex" : "hidden "
-          }    w-full lg:block lg:w-auto mx-auto flex-shrink`}
+            active ? 'flex w-full' : 'hidden '
+          }    mx-auto w-full flex-shrink lg:block lg:w-auto`}
         >
-          <div className=" bg-opacity-50 shadow-black lg:bg-opacity-0 py-5 rounded-xl lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-center flex flex-col lg:h-auto px-10 ">
-            <div className="lg:flex w-full text-white ">
+          <div className=" flex w-full flex-col items-center rounded-xl bg-opacity-50 py-5 px-10 shadow-black lg:ml-auto lg:inline-flex lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:bg-opacity-0 ">
+            <div className="w-full text-white lg:flex ">
               {NavLinks.map((nav, index) => (
                 <div
                   key={index}
-                  className="cursor-pointer hover:text-black border-b border-white lg:border-b-0"
+                  className="cursor-pointer border-b border-white hover:text-black lg:border-b-0"
                 >
                   <Link href={nav.link}>
-                    <div className="lg:inline-flex lg:w-auto px-2 pr-5 py-4 active:bg-purple-500 hover:pr-16  hover:bg-awesome-image-2 rounded-xl font-bold items-center  justify-center   hover:scale-110 transition duration-200 transform ease-out">
+                    <div className="transform items-center justify-center rounded-xl px-2 py-4 pr-5  font-bold transition duration-200 ease-out  hover:scale-110   hover:bg-awesome-image-2 hover:pr-16 active:bg-purple-500 lg:inline-flex lg:w-auto">
                       <h1 id="glitch" className="   text-center">
                         {nav.linkName}
                       </h1>
@@ -79,18 +81,20 @@ export const Navbar = () => {
                   </Link>
                 </div>
               ))}
-            </div>{" "}
-            <div className="relative flex-row mx-auto  lg:flex py-10 lg:py-0 lg:pt-0">
-              <div className="space-y-6 md:space-x-1 lg:space-y-0 lg:flex lg:pl-6">
-                <Link href="/contact">
-                  <button className={`${styles.chatButton} block transition lg:w-28 w-56 ease-in-out duration-400 border-2 border-purple-500 bg-white hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium uppercase text-gray-700 py-2 `} >
+            </div>{' '}
+            <div className="relative mx-auto flex-row  py-10 lg:flex lg:py-0 lg:pt-0">
+              <div className="space-y-6 md:space-x-1 lg:flex lg:space-y-0 lg:pl-6">
+                <Link href="/todo">
+                  <button
+                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500 bg-white py-2 text-sm font-medium uppercase text-gray-700 transition ease-in-out hover:scale-110 lg:w-28 `}
+                  >
                     <p className="">Lets Chat</p>
                   </button>
                 </Link>
               </div>
               <div className="pt-5  lg:pl-10 lg:pt-0 ">
-                <Link href="/">
-                  <button className="block w-56 lg:w-28 border-2 border-purple-500 transition  uppercase ease-in-out duration-200 bg-transparent hover:animate-none hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium hover:bg-awesome-image-2 text-gray-200 py-2 shadow-cyan-300 shadow-lg hover:text-black">
+                <Link href="/todo">
+                  <button className="z-100 item-center block w-56 transform rounded-3xl  border-2 border-purple-500 bg-transparent py-2 text-sm font-medium uppercase text-gray-200 shadow-lg shadow-cyan-300 transition duration-200 ease-in-out hover:scale-110 hover:animate-none hover:bg-awesome-image-2 hover:text-black lg:w-28">
                     Hire Me
                   </button>
                 </Link>
@@ -100,6 +104,6 @@ export const Navbar = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default Navbar;
+  )
+}
+export default Navbar

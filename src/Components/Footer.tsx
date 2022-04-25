@@ -6,7 +6,7 @@ const Footer = () => {
   // Footer Inline Tailwind Removed
   const styles = {
     wrapper:
-      'relative mt-56 h-full  rounded-t-2xl border-4 border-teal-300 border-b-transparent  black  text-center uppercase text-white max-w-5xl mx-auto',
+      'relative mt-40 h-full  rounded-t-2xl border-4 border-teal-300 border-b-transparent  black  text-center uppercase text-white max-w-5xl mx-auto',
     explore__header:
       'w-full rounded-xl bg-awesome-image-2 py-10 pb-10 text-3xl font-extrabold text-black md:text-4xl',
     p__wrapper: ' text-3xl px-5 pt-20 w-full text-center font-extrabold uppercase',
@@ -20,7 +20,7 @@ const Footer = () => {
 
     grid__rows: 'grid-row-4 grid h-1/2 w-full space-y-5 px-10 relative',
     button:
-      'py-2 text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  bottom-10 relative  ',
+      'py-2  text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  bottom-10 relative  ',
     button__text: 'font-semibold tracking-widest text-white hover:text-black',
     play__button:
       'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto h-32 w-96 rounded-full mt-20  border-white border-2 ',
