@@ -69,8 +69,8 @@ const Footer = () => {
         <div className={styles.grid__rows}>
           <div className={styles.icon__container}>
             <Image
-              src={allImages[7].url}
-              alt={allImages[7].alt}
+              src={allImages[0].url}
+              alt={allImages[0].alt}
               layout="fill"
               className={`${styles.footer__icon} scale-95`}
             />
