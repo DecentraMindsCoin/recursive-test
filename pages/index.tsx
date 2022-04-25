@@ -5,6 +5,7 @@ import ImageSlider from '../src/Components/ImageSlider'
 import SPA from '../src/Components/SPA'
 import { InferGetStaticPropsType } from 'next'
 import HeroTypeWriter from '../src/Components/HeroTypreWriter'
+import Navbar from '../src/Components/Navbar'
 
 
 export type ItemsType = {
@@ -30,7 +31,7 @@ const Home = ({
         <title>Recursive Challenge Todo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+<Navbar />
       <div className="relative flex h-screen flex-col items-center justify-center bg-black py-2">
         <ImageSlider />
 

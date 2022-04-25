@@ -42,7 +42,7 @@ export const Navbar = () => {
 
   return (
     <div className=" absolute top-0 w-full overflow-x-hidden uppercase">
-      <div className=" py-2 z-20 px-5 lg:flex items-center  bg-black bg-opacity-90 z-100 relative">
+      <div className=" py-2 z-20 px-5 lg:flex items-center  bg-transparent bg-opacity-90 z-100 relative">
         <div className=" item-center h-12 w-12 relative ">
           <a className="relative" href="/">
             <div className="h-12 w-12 relative rounded-xl border-2 border-white">
@@ -59,7 +59,7 @@ export const Navbar = () => {
 
         <button
           aria-label="top right"
-          className="absolute hover:bg-filter-image-1 hover:text-gray-200 outline-none active:bg-white transition duration-200 transform ease-in-out right-5 top-3 w-10 h-10 bg-purple-500 rounded lg:hidden text-gray-200   border-2 border-white"
+          className="absolute hover:bg-awesome-image-2 hover:text-black outline-none active:bg-white transition duration-200 transform ease-in-out right-5 top-3 w-10 h-10 bg-purple-500 rounded lg:hidden text-gray-200   border-2 border-white"
           onClick={handleClick}
         >
           <div className={`${active ? "hidden " : "block"}  m-1 `}>
@@ -83,7 +83,7 @@ export const Navbar = () => {
                   className="cursor-pointer border-b border-white lg:border-b-0"
                 >
                   <Link href={nav.link}>
-                    <div className="lg:inline-flex lg:w-auto px-2 pr-5 py-4 active:bg-purple-500 hover:pr-16  hover:bg-filter-image-1 rounded-xl text-gray-200 font-bold items-center  justify-center  hover:text-gray-200 hover:scale-110 transition duration-200 transform ease-out">
+                    <div className="lg:inline-flex lg:w-auto px-2 pr-5 py-4 active:bg-purple-500 hover:pr-16  hover:bg-awesome-image-2 rounded-xl text-gray-200 font-bold items-center  justify-center  hover:text-gray-200 hover:scale-110 transition duration-200 transform ease-out">
                       <h1 id="glitch" className="text-gray-200  text-center">
                         {nav.linkName}
                       </h1>
@@ -102,7 +102,7 @@ export const Navbar = () => {
               </div>
               <div className="pt-5  lg:pl-10 lg:pt-0 ">
                 <Link href="/hireme">
-                  <button className="block w-56 lg:w-28 border-2 border-purple-500 transition  uppercase ease-in-out duration-200 bg-transparent hover:animate-none hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium hover:bg-filter-image-1 text-gray-200 py-2 shadow-cyan-300 shadow-lg">
+                  <button className="block w-56 lg:w-28 border-2 border-purple-500 transition  uppercase ease-in-out duration-200 bg-transparent hover:animate-none hover:scale-110 transform rounded-3xl text-sm z-100 item-center font-medium hover:bg-awesome-image-2 text-gray-200 py-2 shadow-cyan-300 shadow-lg">
                     Hire Me
                   </button>
                 </Link>
