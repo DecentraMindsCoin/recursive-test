@@ -47,7 +47,7 @@ const Home = ({
                 <div className="py-20 text-center">
                   <span className="text-2xl font-extrabold text-violet-400">
                     Enter Things You{' '}
-                    <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 hover:text-white">
+                    <span className="cursor-pointer rounded-full border-2 border-violet-400 bg-awesome-image-2 py-1 px-3 font-extrabold italic leading-loose text-black hover:bg-awesome-image-3 shadow-teal-300 hover:shadow-violet-400 shadow-xl hover:text-white">
                       Must Do
                     </span>{' '}
                     Before You{' '}

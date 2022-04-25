@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { allImages } from '../todos'
 import SubButton from './SubForm/SubButton'
@@ -25,7 +26,7 @@ const Footer = () => {
       'py-2  max-w-xs mx-auto text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
     button__text: 'font-semibold tracking-widest text-white hover:text-black',
     play__button:
-      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-white border-2 shadow-lg shadow-teal-400 hover:shadow-fuchsia-300',
+      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-teal-300 hover:border-violet-400 border-8 shadow-lg shadow-teal-400 hover:shadow-fuchsia-300',
     play__image: 'absolute top-0 object-cover rounded-full hover:opacity-50 ',
     hidden__text:
       'px-8 pt-16 font-bold font-sans uppercase italic tracking-wide',
@@ -122,10 +123,14 @@ const Footer = () => {
           </div>
           <br />
           <SubButton />
-          <div className={styles.button}>
-            <button className={styles.explore__button}>
-              <p className={styles.button__text}>Explore More To Do!</p>
-            </button>
+          <div className={styles.button}> <button className={styles.explore__button}>
+            <Link href="/todo">
+              <a>
+               
+                  <p className={styles.button__text}>Explore More To Do!</p>
+               
+              </a>
+            </Link> </button>
           </div>
         </div>
       </div>

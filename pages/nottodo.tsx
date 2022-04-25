@@ -2,87 +2,116 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/solid'
+import Navbar from '../src/Components/Navbar'
+import { InferGetServerSidePropsType } from 'next'
+import { GraphQLClient } from 'graphql-request'
 
-const NotTodo = () => {
+const NotTodo = ({
+  todoItems,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
-      <h1>
+      <div className="relative bg-black">
+        <Navbar />
         <div className="relative h-screen w-full bg-black text-center text-white">
           <div className="relative h-screen">
             <div className="absolute top-1/3 mx-auto w-full  flex-row  space-y-5 px-4">
-              <h1 className="font-sans text-7xl font-bold uppercase text-teal-300">
+              <h1 className="px-4 font-sans text-7xl font-bold uppercase text-teal-300 ">
                 Things not to do!{' '}
               </h1>
-              <p className="pt-10 text-4xl">
-                Do not forget to go do something...
+              <p className="px-5 pt-10 text-4xl font-bold uppercase">
+                Do not forget to{' '}
+                <span className="italic text-teal-300">go do something...</span>
               </p>{' '}
-              <div className="w-full flex-row relative">
-                        <p className="pt-10 text-xl text-gray-300">
-                Resize Screen...
-              </p>
-              <div className='flex mx-auto w-full absolute justify-between space-x-12 items-center'>
-                  <ArrowLeftIcon className='h-10 w-10 '/>
-              <ArrowRightIcon className='h-10 w-10 '/>  
+              <div className="relative hidden w-full flex-row lg:block">
+                <p className="pt-10 text-xl text-gray-300">Resize Screen...</p>
+                <div className="absolute mx-auto hidden w-full items-center justify-between space-x-12 lg:flex">
+                  <ArrowLeftIcon className="h-10 w-10 " />
+                  <ArrowRightIcon className="h-10 w-10 " />
+                </div>
               </div>
-              </div>
-        
-            
             </div>{' '}
-            <div className="relative flex-1 h-96 w-full sm:hidden">
+            <div className="relative h-96 w-full flex-1 sm:hidden">
               <Image
-                src="https://media.graphassets.com/QUGSOG7RQpSVx3KFJXFc"
+                src={todoItems[3].image[0].url}
                 layout="fill"
                 className="absolute object-cover"
               />
             </div>
-            <div className="relative flex-1 h-96 w-full hidden sm:flex  md:hidden">
+            <div className="relative hidden h-96 w-full flex-1 sm:flex  md:hidden">
               <Image
-                src="https://media.graphassets.com/ChKWCsyNSc2cPlUqvZ0b"
+                src={todoItems[3].image[1].url}
                 layout="fill"
                 className="absolute object-cover"
               />
             </div>
-            <div className="relative flex-1 h-96 w-full hidden md:flex lg:hidden">
+            <div className="relative hidden h-96 w-full flex-1 md:flex lg:hidden">
               <Image
-                src="https://media.graphassets.com/E7FW2hfOTRSQsXLcbUoH"
+                src={todoItems[3].image[2].url}
                 layout="fill"
                 className="absolute object-cover"
               />
             </div>
-            <div className="relative flex-1 h-96 w-full hidden lg:flex xl:hidden">
+            <div className="relative hidden h-96 w-full flex-1 lg:flex xl:hidden">
               <Image
-                src="https://media.graphassets.com/m05cOYPGTNqwFsNSwGHs"
+                src={todoItems[3].image[3].url}
                 layout="fill"
                 className="absolute object-cover"
               />
             </div>
-            <div className="relative flex-1 h-96 w-full hidden xl:flex 2xl:hidden ">
+            <div className="relative hidden h-96 w-full flex-1 xl:flex ">
               <Image
-                src="https://media.graphassets.com/FudPH1JSpOIpHGjjydN2"
+                src={todoItems[3].image[4].url}
                 layout="fill"
                 className="absolute object-cover"
               />
-            </div>
-            <div className="relative flex-1 h-96 w-full hidden 2xl:flex">
-              <Image
-                src="https://media.graphassets.com/spy0H023S62OaDIOts7q"
-                layout="fill"
-                className="absolute object-cover"
-              />
+            </div>{' '}
+            <div className="bg-black px-5 pb-10  absolute bottom-20 w-full">
+              <Link href="/">
+                <a target="/">
+                  <button className=" mx-auto w-full max-w-3xl  rounded-full border-4 border-teal-300 bg-awesome-image-2  py-2 text-center font-sans font-bold uppercase text-black shadow-lg shadow-teal-300 hover:bg-awesome-image-3 hover:text-white hover:shadow-violet-400 ">
+                    Go Back
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
-
-          <Link href="/">
-            <a target="/">
-              <button className="absolute bottom-20 mx-auto w-40 rounded-full  border-4 border-white bg-awesome-image-2 py-1 text-center font-sans font-bold uppercase text-black hover:bg-awesome-image-3 hover:text-white ">
-                Go Back
-              </button>
-            </a>
-          </Link>
         </div>
-      </h1>
+      </div>
     </>
   )
 }
 
 export default NotTodo
+export async function getServerSideProps() {
+  // remove link and use URLPOINT inside .env variable in production. Errors defining 'types' will patch later.
+
+  const UrlPoint = process.env.ENDPOINT
+  const graphcms = new GraphQLClient(
+    'https://api-us-west-2.graphcms.com/v2/cl29lbesw19f901z98lsl6c0k/master'
+  )
+
+  const { todoItems } = await graphcms.request(
+    `{
+        todoItems {
+          name
+          slug
+         image {
+           id
+          url
+          fileName
+          
+        
+         }
+      
+        }
+      }`
+  )
+  console.log(todoItems)
+
+  return {
+    props: {
+      todoItems,
+    },
+  }
+}
