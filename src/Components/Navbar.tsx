@@ -84,13 +84,13 @@ export const Navbar = () => {
             </div>{' '}
             <div
               className={`${
-                active ? 'relative ' : 'absolute'
-              } right-5  flex-row py-10 lg:flex lg:py-0 lg:pt-0`}
+                active ? 'relative' : 'absolute  '
+              } right-5 flex-row py-10 lg:flex lg:py-0 lg:pt-0`}
             >
               <div className="space-y-6 md:space-x-1 lg:flex lg:space-y-0 lg:pl-6">
                 <Link href="/todo">
                   <button
-                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500  py-2 text-sm font-medium uppercase text-gray-300 transition ease-in-out hover:scale-110 lg:w-28 bg-awesome-image-3`}
+                    className={`${styles.chatButton} duration-400 z-100 item-center block w-56 transform rounded-3xl border-2 border-purple-500  py-2 text-sm font-extrabold uppercase text-white transition ease-in-out hover:scale-110 lg:w-28 bg-awesome-image-3`}
                   >
                     <p className="">Lets Chat</p>
                   </button>
@@ -98,7 +98,7 @@ export const Navbar = () => {
               </div>
               <div className="pt-5  lg:pl-10 lg:pt-0 ">
                 <Link href="/todo">
-                  <button className="z-100 item-center block w-56 transform rounded-3xl  border-2 border-purple-500 bg-transparent py-2 text-sm font-medium uppercase text-gray-200 shadow-lg hover:shadow-cyan-300 transition duration-200 ease-in-out hover:scale-110 hover:animate-none hover:bg-awesome-image-2 hover:text-black lg:w-28 ">
+                  <button className="z-100 item-center block w-56 transform rounded-3xl  border-2 border-purple-500 bg-transparent py-2 text-sm font-extrabold uppercase text-white shadow-lg hover:shadow-cyan-300 transition duration-200 ease-in-out hover:scale-110 hover:animate-none hover:bg-awesome-image-2 hover:text-black lg:w-28 ">
                     Hire Me
                   </button>
                 </Link>

@@ -6,11 +6,13 @@ const Footer = () => {
   // Footer Inline Tailwind Removed
   const styles = {
     wrapper:
-      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  black  text-center uppercase text-white sm:max-w-5xl mx-auto',
+      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white sm:max-w-5xl mx-auto',
     explore__header:
-      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black md:text-4xl',
-    p__wrapper: 'text-left text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
-    p__span: " cursor-pointer  italic text-teal-300 hover:underline",
+      'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-white md:text-4xl ',
+    p__wrapper:
+      'text-left text-3xl px-7 pt-20 w-full  font-extrabold uppercase',
+    p__span:
+      ' cursor-pointer  italic text-teal-300 hover:underline shadow-xl hover:shadow-teal-300',
     icon__container:
       'relative mx-auto h-40 w-full rounded-xl hover:scale-105 cursor-pointer',
     footer__icon:
@@ -23,28 +25,27 @@ const Footer = () => {
       'py-2  max-w-xs mx-auto text-white rounded-full border-4 border-violet-400 shadow-lg shadow-cyan-300 hover:shadow-fuchsia-300 hover:bg-awesome-image-2 hover:scale-105 transition transform ease-in-out duration-500  w-full text-center font-extrabold  relative ',
     button__text: 'font-semibold tracking-widest text-white hover:text-black',
     play__button:
-      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-white border-2 ',
+      'hover:scale-105 hover:bg-awesome-image-2 relative mx-auto flex-1 rounded-full mt-20  border-white border-2 shadow-lg shadow-teal-400 hover:shadow-fuchsia-300',
     play__image: 'absolute top-0 object-cover rounded-full hover:opacity-50 ',
-    hidden__text: 'px-8 pt-16 font-bold font-sans uppercase italic tracking-wide',
+    hidden__text:
+      'px-8 pt-16 font-bold font-sans uppercase italic tracking-wide',
     explore__button: '  w-full text-center font-extrabold font-sans uppercase ',
   }
-// Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
+  // Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.explore__header}>Explore Things To Do!</h1>
       <p className={styles.p__wrapper}>
-        <span className={styles.p__span}>
-          {' '}
-          To do{' '}
-        </span>
+        <span className={styles.p__span}> To do </span>
         or{' '}
         <span className="cursor-pointer italic text-teal-300 hover:underline">
           {' '}
           not to do
         </span>
-        , that is the question...Don't overcomplicate it, just start by doing the <span className="text-teal-400">things</span>  that make you happy. 
+        , that is the question...Don't overcomplicate it, just start by doing
+        the <span className="text-teal-400">things</span> that make you happy.
       </p>
-   
+
       <div>
         <button className={styles.play__button}>
           <Image
@@ -56,8 +57,8 @@ const Footer = () => {
           />
         </button>
       </div>
-      <p className="pt-10 px-5 text-3xl tracking-widest text-white md:text-4xl">
-        <span className="cursor-pointer vfont-sans  text-base italic text-gray-300 hover:underline">
+      <p className="px-5 pt-10 text-3xl tracking-widest text-white md:text-4xl">
+        <span className="vfont-sans cursor-pointer  text-base italic text-gray-300 hover:underline">
           Hover to discover...
         </span>
       </p>
@@ -72,7 +73,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do Something Adventerous!"</p>
           </div>{' '}
-          <br/>
+          <br />
           <SubButton />
           <div className={styles.icon__container}>
             <Image
@@ -93,9 +94,11 @@ const Footer = () => {
               layout="fill"
               className={`${styles.footer__icon} scale-75`}
             />
-            <p className={`${styles.hidden__text} px-12`}>"Do More With Your Family!"</p>
+            <p className={`${styles.hidden__text} px-12`}>
+              "Do More With Your Family!"
+            </p>
           </div>
-          <br/>
+          <br />
           <SubButton />
           <div className={styles.icon__container}>
             <Image
@@ -106,7 +109,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do More!"</p>
           </div>
-          <br/>
+          <br />
           <SubButton />
           <div className={`${styles.icon__container} w-1/2`}>
             <Image
@@ -117,7 +120,7 @@ const Footer = () => {
             />
             <p className={styles.hidden__text}>"Do!"</p>
           </div>
-          <br/>
+          <br />
           <SubButton />
           <div className={styles.button}>
             <button className={styles.explore__button}>
