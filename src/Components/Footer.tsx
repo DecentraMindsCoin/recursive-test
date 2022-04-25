@@ -7,7 +7,7 @@ const Footer = () => {
   // Footer Inline Tailwind Removed
   const styles = {
     wrapper:
-      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white sm:max-w-5xl mx-auto',
+      'relative mt-40 h-full rounded-t-2xl border-4 border-teal-300 border-b-transparent  text-center uppercase text-white sm:max-w-5xl mx-auto flex',
     explore__header:
       'w-full rounded-xl bg-awesome-image-3 hover:bg-image-3 py-10 pb-10 text-3xl font-extrabold text-black cursor-pointer  hover:text-white md:text-4xl ',
     p__wrapper:
@@ -31,20 +31,24 @@ const Footer = () => {
     hidden__text:
       'px-8 pt-16 font-bold font-sans uppercase italic tracking-wide',
     explore__button: '  w-full text-center font-extrabold font-sans uppercase ',
+    p__second__span: 'cursor-pointer italic text-teal-300 hover:underline',
+    discover__text:
+      'px-5 pt-10 text-3xl tracking-widest text-white md:text-4xl',
+    discover__span:
+      'font-sans cursor-pointer  text-base italic text-gray-300 hover:underline',
   }
   // Used Footer.js Tailwind styling to show removed Tailwind as own variable using style.{name} for possibly cleaner code?
   return (
     <div className={styles.wrapper}>
+
+
+   
       <h1 className={styles.explore__header}>Explore Things To Do!</h1>
       <p className={styles.p__wrapper}>
         <span className={styles.p__span}> To do </span>
-        or{' '}
-        <span className="cursor-pointer italic text-teal-300 hover:underline">
-          {' '}
-          not to do
-        </span>
-        , that is the question...Don't overcomplicate it, just start by doing
-        the <span className="text-teal-400">things</span> that make you happy.
+        or <span className={styles.p__second__span}> not to do</span>, that is
+        the question...Don't overcomplicate it, just start by doing the{' '}
+        <span className="text-teal-400">things</span> that make you happy.
       </p>
 
       <div>
@@ -58,10 +62,8 @@ const Footer = () => {
           />
         </button>
       </div>
-      <p className="px-5 pt-10 text-3xl tracking-widest text-white md:text-4xl">
-        <span className="vfont-sans cursor-pointer  text-base italic text-gray-300 hover:underline">
-          Hover to discover...
-        </span>
+      <p className={styles.discover__text}>
+        <span className={styles.discover__span}>Hover to discover...</span>
       </p>
       <div className={styles.flex__row}>
         <div className={styles.grid__rows}>
@@ -123,18 +125,19 @@ const Footer = () => {
           </div>
           <br />
           <SubButton />
-          <div className={styles.button}> <button className={styles.explore__button}>
-            <Link href="/todo">
-              <a>
-               
+          <div className={styles.button}>
+            {' '}
+            <button className={styles.explore__button}>
+              <Link href="/todo">
+                <a>
                   <p className={styles.button__text}>Explore More To Do!</p>
-               
-              </a>
-            </Link> </button>
+                </a>
+              </Link>{' '}
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </div>  
   )
 }
 

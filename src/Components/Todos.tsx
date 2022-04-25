@@ -81,7 +81,7 @@ export const Todos = () => {
             {}
             <div className="relative mx-auto mt-40 h-96 w-full flex-1  cursor-pointer rounded-full bg-teal-400 shadow-xl shadow-teal-400 ring-white sm:h-96 sm:w-96  sm:ring-4">
               <Image
-                src={allImages[8].url}
+                src="https://media.graphassets.com/QUGSOG7RQpSVx3KFJXFc"
                 layout="fill"
                 alt="jack black in nacho libre smiling"
                 className="absolute rounded-full border-4 border-white bg-teal-400 object-cover"

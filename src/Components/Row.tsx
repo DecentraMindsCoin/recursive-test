@@ -9,28 +9,29 @@ export const Row = ({
 }: TodoProps) => (
   <div
     className={`
-         mb-2 flex-1 w-full uppercase items-center justify-between p-4 my-10  
+         my-10 mb-2 w-full flex-1 items-center justify-between p-4 uppercase  
        ${
          isCompleted
            ? 'bg-gray-400 '
-           : 'bg-opacity-60  shadow-teal-300 shadow-lg  bg-purple-500 hover:bg-image sm:bg-image-1 md:bg-image-2 lg:bg-image-3 xl:bg-image-4 py-10'
+           : 'hover:bg-image  bg-violet-400 bg-opacity-60 py-10 shadow-lg shadow-teal-300 sm:bg-image-1 md:bg-image-2 lg:bg-image-3 xl:bg-image-4'
        }
       `}
   >
     <div
       className={`
-          ml-2 font-sans text-sm font-medium  px-2 border-2 border-black shadow-teal-300 shadow-xl  bg-black  text-white text-center  italic mr-5 py-2  
+          ml-2 mr-5 border-2 border-black  bg-black px-2 py-2 text-center font-sans  text-sm  font-medium italic  text-white shadow-xl shadow-teal-300  
           ${isCompleted ? ' line-through' : 'white'}
         `}
     >
-   <p className='font-extrabold'>I Must... <span className='text-teal-300'> {task}</span>
-     </p> 
+      <p className="font-extrabold">
+        I Must... <span className="text-teal-300"> {task}</span>
+      </p>
     </div>
     <SubButton />
-    <div className=" flex-row flex items-center justify-between space-x-2 ">
+    <div className=" flex flex-row items-center justify-between space-x-2 ">
       <button
         aria-label="Delete a todo"
-        className="flex h-7 w-7 items-center justify-center rounded border-4 bg-red-500 px-3 font-bold text-white hover:text-black  hover:bg-white"
+        className="flex h-7 w-7 items-center justify-center rounded border-4 bg-red-500 px-3 font-bold text-white hover:bg-white  hover:text-black"
         onClick={() => handleDeleteTodo(id)}
       >
         x
